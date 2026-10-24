@@ -1,0 +1,1060 @@
+---
+/**
+ * ============================================================================
+ * EVERYTOOL — SOFT NEO-BRUTALIST CURATED WEB DIRECTORY
+ * ============================================================================
+ * Features:
+ * 1. Soft Neo-Brutalist Design: Tactile cards, bold borders, dotted paper canvas
+ * 2. Sunshine Marquee Ticker Tape: Fun facts, daily tips, and community notices
+ * 3. Interactive Hero Bento Grid:
+ *    - "Community Favorites" (Top Picks)
+ *    - "Open Source Gems"
+ *    - "Retro Mini-Arcade" (Playable Game Boy style Snake & Gem Roller)
+ *    - "💖 Pocket Toolkit" (Browser-saved personal favorites via localStorage)
+ * 4. Real-time Search & Spotlight Modal (Ctrl + K)
+ * 5. 🎲 "Surprise Me" Random Tool Generator
+ * 6. 100% Free Static Hosting compatible (Zero backend, GitHub Pages ready)
+ * ============================================================================
+ */
+
+import tools from "../data/tools.json";
+import "../styles/global.css";
+
+// 1. EXTRACT CATEGORIES AND STATS
+const categories = [...new Set(tools.map((t) => t.category))];
+const topPicks = tools.filter((t) => t.pricing?.includes("⭐") || t.pricing?.toLowerCase().includes("top"));
+const openSourceTools = tools.filter((t) => t.pricing?.toLowerCase().includes("open source") || t.pricing?.toLowerCase().includes("free"));
+
+// 2. HELPER TO CREATE CLEAN, URL-SAFE ANCHOR LINKS
+function toSlug(cat: string) {
+	return cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+// 3. CATEGORY ICON & QUIRKY SUBTITLE MAPPING
+const categoryMeta: Record<string, { icon: string; subtitle: string }> = {
+	"Adblocking / Privacy": { icon: "🛡️", subtitle: "Reclaim your screen and keep your privacy safe" },
+	"Artificial Intelligence": { icon: "🤖", subtitle: "Curated AI brains, assistants, and creative tools" },
+	"Movies / TV / Anime": { icon: "📺", subtitle: "Binge-worthy streaming and media archives" },
+	"Music / Podcasts / Radio": { icon: "🎵", subtitle: "Soundscapes, free tunes, and radio waves" },
+	"Gaming / Emulation": { icon: "🎮", subtitle: "Retro classics, ROMs, and indie fun" },
+	"Books / Comics / Manga": { icon: "📗", subtitle: "Endless libraries for curious bookworms" },
+	"Downloading": { icon: "💾", subtitle: "Snatch videos, audio, and media from anywhere" },
+	"Torrenting": { icon: "🌀", subtitle: "P2P networks, clients, and safe trackers" },
+	"Educational": { icon: "🧠", subtitle: "Learn anything for free without the tuition fees" },
+	"Android / iOS": { icon: "📱", subtitle: "Smarter, tracker-free mobile apps" },
+	"Linux / macOS": { icon: "🐧", subtitle: "Open operating systems and power utilities" },
+	"System Tools": { icon: "⚙️", subtitle: "Optimize, clean, and speed up your machine" },
+	"File Tools": { icon: "📁", subtitle: "Compress, convert, and manage documents" },
+	"Internet Tools": { icon: "🌐", subtitle: "Web inspectors, speed tests, and bypassers" },
+	"Social Media Tools": { icon: "💬", subtitle: "Better interfaces and downloader helpers" },
+	"Text Tools": { icon: "📝", subtitle: "Markdown, diffs, formatting, and notes" },
+	"Gaming Tools": { icon: "🕹️", subtitle: "Mods, performance boosts, and game helpers" },
+	"Image Tools": { icon: "🎨", subtitle: "Background removers, vectorizers, and editors" },
+	"Video Tools": { icon: "🎬", subtitle: "Transcoders, screen recorders, and editors" },
+	"Developer Tools": { icon: "💻", subtitle: "APIs, sandboxes, cheat-sheets, and dev toys" },
+};
+
+// 4. EXTRACT DOMAIN HELPER FOR LIVE FAVICONS
+function getDomain(urlStr: string) {
+	try {
+		return new URL(urlStr).hostname;
+	} catch {
+		return "github.com";
+	}
+}
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EveryTool — Free & Curated Web Directory</title>
+		<meta name="description" content="Discover 2,300+ handpicked free tools, privacy champions, and open-source gems in a fun, playful directory." />
+		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👀</text></svg>" />
+
+		<!-- Inline script for instant theme restore (prevents flicker) -->
+		<script is:inline>
+			const savedTheme = localStorage.getItem("everytool-theme") || "light";
+			if (savedTheme === "dark") {
+				document.documentElement.classList.add("theme-dark");
+			}
+		</script>
+	</head>
+
+	<body class="min-h-screen text-[var(--text-main)] transition-colors duration-200">
+
+		<!-- ===================================================================== -->
+		<!-- 1. TOP ANNOUNCEMENT TICKER TAPE (Bored.com Style Sunshine Marquee)    -->
+		<!-- ===================================================================== -->
+		<div class="w-full bg-[var(--ticker-bg)] text-[var(--ticker-text)] border-b-[2.5px] border-[var(--border-neo)] font-bold text-xs uppercase tracking-wide py-2 overflow-hidden relative select-none">
+			<div class="animate-marquee whitespace-nowrap flex items-center gap-8">
+				<span>★ 2,338 HAND-CURATED TOOLS WITH ZERO SPONSORED ADS</span>
+				<span>★ TIP: PRESS <kbd class="px-1.5 py-0.5 bg-black text-white rounded text-[10px]">CTRL + K</kbd> FOR LIGHTNING SPOTLIGHT SEARCH</span>
+				<span>★ CLICK THE DICE 🎲 BUTTON TO DISCOVER A SURPRISE GEM</span>
+				<span>★ SAVE YOUR FAVORITE GEMS DIRECTLY TO YOUR BROWSER TOOLKIT</span>
+				<span>★ 100% FREE & OPEN DIRECTORY HOSTED DIRECTLY ON GITHUB</span>
+				<span>★ THE LONGEST RECORDED FLIGHT OF A CHICKEN LASTED 13 SECONDS</span>
+				<!-- Duplicate for continuous infinite scroll loop -->
+				<span>★ 2,338 HAND-CURATED TOOLS WITH ZERO SPONSORED ADS</span>
+				<span>★ TIP: PRESS <kbd class="px-1.5 py-0.5 bg-black text-white rounded text-[10px]">CTRL + K</kbd> FOR LIGHTNING SPOTLIGHT SEARCH</span>
+				<span>★ CLICK THE DICE 🎲 BUTTON TO DISCOVER A SURPRISE GEM</span>
+				<span>★ SAVE YOUR FAVORITE GEMS DIRECTLY TO YOUR BROWSER TOOLKIT</span>
+			</div>
+		</div>
+
+		<!-- ===================================================================== -->
+		<!-- 2. MAIN HEADER (Logo, Search Capsule, Surprise Me & Nav Links)        -->
+		<!-- ===================================================================== -->
+		<header class="sticky top-0 z-40 bg-[var(--bg-canvas)]/95 backdrop-blur-md border-b-[2.5px] border-[var(--border-neo)] px-4 sm:px-8 py-3.5 transition-colors">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+				
+				<!-- Logo with cute animated mascot -->
+				<div class="flex items-center gap-3">
+					<a href="/" class="flex items-center gap-2 group">
+						<!-- Expressive playful cartoon face logo -->
+						<div class="w-10 h-10 rounded-xl bg-[#38bdf8] border-[2.5px] border-[var(--border-neo)] shadow-[3px_3px_0px_var(--shadow-neo)] flex items-center justify-center text-xl group-hover:rotate-6 transition-transform">
+							😲
+						</div>
+						<div class="flex flex-col">
+							<span class="font-heading font-extrabold text-2xl tracking-tight leading-none text-[var(--text-main)]">
+								everytool<span class="text-[#ffc700] text-3xl leading-none">.</span>
+							</span>
+							<span class="text-[10px] font-bold text-[var(--text-muted)] tracking-wider uppercase mt-0.5">
+								The Curated Web
+							</span>
+						</div>
+					</a>
+
+					<!-- Quick navigation pills -->
+					<nav class="hidden lg:flex items-center gap-1.5 ml-4 pl-4 border-l-2 border-[var(--border-neo)]/30 text-xs font-bold">
+						<a href="#categories-section" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Categories</a>
+						<a href="#top-picks" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Top Picks</a>
+						<a href="/beginners-guide" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Beginners Guide</a>
+					</nav>
+				</div>
+
+				<!-- Neo-Brutalist Search Capsule (With Dice Roll Trigger) -->
+				<div class="w-full md:w-auto flex-1 max-w-xl flex items-center gap-2">
+					<div class="relative w-full flex items-center bg-[var(--bg-card)] border-[2.5px] border-[var(--border-neo)] shadow-[3px_3px_0px_var(--shadow-neo)] rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#ffc700] transition">
+						
+						<!-- 🎲 Surprise Me Dice Roll Button -->
+						<button 
+							id="diceRollBtn" 
+							type="button" 
+							class="px-3 py-2.5 bg-[#fef08a] dark:bg-[#ca8a04] hover:bg-[#fde047] border-r-[2.5px] border-[var(--border-neo)] text-base transition flex items-center justify-center cursor-pointer"
+							title="Surprise me! Pick a random tool"
+						>
+							🎲
+						</button>
+
+						<!-- Search Trigger Input -->
+						<button 
+							id="searchBarTrigger" 
+							type="button" 
+							class="w-full text-left px-3.5 py-2.5 text-sm text-[var(--text-muted)] flex items-center justify-between cursor-pointer"
+						>
+							<span class="truncate">Search 2,300+ tools or feel curious...</span>
+							<kbd class="hidden sm:inline-block px-2 py-0.5 bg-[var(--bg-card-alt)] text-[var(--text-main)] text-[10px] font-mono font-bold rounded border border-[var(--border-neo)] shadow-[1px_1px_0px_var(--shadow-neo)]">
+								Ctrl + K
+							</kbd>
+						</button>
+
+						<!-- Search Icon Button -->
+						<button 
+							id="searchBtnIcon" 
+							type="button" 
+							class="px-3 py-2.5 bg-[var(--text-main)] text-[var(--bg-card)] hover:opacity-90 transition flex items-center justify-center cursor-pointer"
+						>
+							🔍
+						</button>
+					</div>
+
+					<!-- Theme Switcher Button (☀️ Paper / 🌙 Dark) -->
+					<button 
+						id="themeToggleBtn" 
+						type="button" 
+						class="neo-btn bg-[var(--bg-card)] p-2.5 text-base flex-shrink-0"
+						title="Toggle Light / Dark Mode"
+					>
+						<span id="themeIcon">☀️</span>
+					</button>
+
+					<!-- Pocket Toolkit Shortcut -->
+					<a 
+						href="#my-toolkit" 
+						class="neo-btn bg-[#fda4af] hover:bg-[#fb7185] text-black px-3 py-2 text-xs font-bold flex-shrink-0 hidden sm:flex items-center gap-1.5"
+						title="View Saved Favorites"
+					>
+						<span>💖</span>
+						<span id="headerSavedCount">0</span>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- ===================================================================== -->
+		<!-- 3. SUB-HEADER BAR (Last Updated, Quick Actions)                       -->
+		<!-- ===================================================================== -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-8 pt-5 pb-3 flex flex-wrap items-center justify-between gap-3 text-xs font-bold text-[var(--text-muted)]">
+			<div class="flex items-center gap-2">
+				<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+				<span>Last updated October 24, 2026</span>
+				<span class="text-[var(--text-faint)]">•</span>
+				<span>Zero trackers</span>
+			</div>
+			<div class="flex items-center gap-2">
+				<button id="quickRandomBtn" type="button" class="neo-btn bg-[var(--bg-card)] px-3 py-1.5 text-xs">
+					🎲 Roll Random Gem
+				</button>
+				<a href="#categories-section" class="neo-btn bg-[#fed7aa] text-black px-3 py-1.5 text-xs">
+					📂 All Categories ({categories.length})
+				</a>
+			</div>
+		</div>
+
+		<!-- ===================================================================== -->
+		<!-- 4. HERO BENTO GRID DASHBOARD (Directly inspired by bored.com)         -->
+		<!-- ===================================================================== -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-8 py-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+				<!-- BENTO 1: COMMUNITY TOP PICKS -->
+				<div class="neo-card p-5 flex flex-col justify-between">
+					<div>
+						<div class="flex items-center justify-between mb-1">
+							<h3 class="font-heading font-extrabold text-lg text-[var(--text-main)]">
+								⭐ Top Picks
+							</h3>
+							<span class="neo-pill bg-black text-white dark:bg-white dark:text-black">
+								{topPicks.length}
+							</span>
+						</div>
+						<p class="text-xs italic text-[var(--text-muted)] mb-4">
+							"Beloved digital essentials"
+						</p>
+
+						<!-- Top 6 curated items list -->
+						<div class="space-y-2">
+							{topPicks.slice(0, 6).map((tool, idx) => (
+								<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-[var(--bg-card-alt)] transition">
+									<div class="flex items-center gap-2.5 min-w-0 pr-2">
+										<span class="text-xs font-mono font-bold text-[var(--text-faint)] w-4">
+											{idx + 1}.
+										</span>
+										<img 
+											src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=64`} 
+											alt="" 
+											class="w-4 h-4 rounded-xs flex-shrink-0"
+											loading="lazy"
+										/>
+										<a 
+											href={tool.url} 
+											target="_blank" 
+											rel="noopener noreferrer" 
+											class="text-xs font-bold text-[var(--text-main)] group-hover:text-amber-500 truncate transition"
+											title={tool.description}
+										>
+											{tool.name.split("/")[0].trim()}
+										</a>
+									</div>
+									<a 
+										href={tool.url} 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="text-xs text-[var(--text-faint)] group-hover:translate-x-1 transition flex-shrink-0"
+									>
+										›
+									</a>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<a href="#top-picks" class="mt-4 pt-3 border-t border-[var(--border-neo)]/20 text-xs font-bold text-center text-[var(--text-muted)] hover:text-[var(--text-main)] block">
+						View all {topPicks.length} picks →
+					</a>
+				</div>
+
+				<!-- BENTO 2: 100% FREE & OPEN SOURCE GEMS -->
+				<div class="neo-card p-5 flex flex-col justify-between">
+					<div>
+						<div class="flex items-center justify-between mb-1">
+							<h3 class="font-heading font-extrabold text-lg text-[var(--text-main)]">
+								🌿 Open Source
+							</h3>
+							<span class="neo-pill bg-emerald-500 text-black">
+								{openSourceTools.length}
+							</span>
+						</div>
+						<p class="text-xs italic text-[var(--text-muted)] mb-4">
+							"Community-built freedom tools"
+						</p>
+
+						<!-- 6 Open Source Gems -->
+						<div class="space-y-2">
+							{openSourceTools.slice(6, 12).map((tool, idx) => (
+								<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-[var(--bg-card-alt)] transition">
+									<div class="flex items-center gap-2.5 min-w-0 pr-2">
+										<span class="text-xs font-mono font-bold text-[var(--text-faint)] w-4">
+											{idx + 1}.
+										</span>
+										<img 
+											src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=64`} 
+											alt="" 
+											class="w-4 h-4 rounded-xs flex-shrink-0"
+											loading="lazy"
+										/>
+										<a 
+											href={tool.url} 
+											target="_blank" 
+											rel="noopener noreferrer" 
+											class="text-xs font-bold text-[var(--text-main)] group-hover:text-emerald-500 truncate transition"
+											title={tool.description}
+										>
+											{tool.name.split("/")[0].trim()}
+										</a>
+									</div>
+									<a 
+										href={tool.url} 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="text-xs text-[var(--text-faint)] group-hover:translate-x-1 transition flex-shrink-0"
+									>
+										›
+									</a>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<a href="#categories-section" class="mt-4 pt-3 border-t border-[var(--border-neo)]/20 text-xs font-bold text-center text-[var(--text-muted)] hover:text-[var(--text-main)] block">
+						Explore more open source →
+					</a>
+				</div>
+
+				<!-- BENTO 3: RETRO GAME BOY MINI-ARCADE (The show-stopper from your screenshot!) -->
+				<div class="neo-card p-5 bg-[#e2e8f0] dark:bg-[#1e293b] flex flex-col justify-between select-none">
+					<div>
+						<!-- Handheld Header -->
+						<div class="flex items-center justify-between mb-3 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+							<span>★ RETRO ARCADE</span>
+							<span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+						</div>
+
+						<!-- Game Boy LCD Olive Screen -->
+						<div class="retro-screen p-3 rounded-lg flex flex-col items-center justify-center min-h-[160px] text-center font-arcade relative overflow-hidden">
+							<div class="absolute top-1 left-2 text-[10px] opacity-60">EVERYBOY</div>
+							<div class="absolute top-1 right-2 text-[10px] opacity-60">BATTERY: FULL</div>
+
+							<!-- Dynamic Screen Content -->
+							<div id="retroScreenContent" class="py-2">
+								<div class="text-3xl leading-none mb-1">🕹️</div>
+								<div class="text-base font-bold leading-tight uppercase">READY PLAYER 1</div>
+								<div class="text-xs opacity-75 mt-1">TAP BUTTON TO ROLL GEM OR PLAY SNAKE</div>
+							</div>
+						</div>
+
+						<!-- Handheld Buttons -->
+						<div class="mt-4 flex items-center justify-between gap-2">
+							<button 
+								id="retroResetBtn" 
+								type="button" 
+								class="px-3 py-1.5 bg-slate-300 dark:bg-slate-700 hover:opacity-80 rounded text-[11px] font-bold text-black dark:text-white border border-black/40 shadow-xs cursor-pointer"
+							>
+								RESET
+							</button>
+							<button 
+								id="retroRollBtn" 
+								type="button" 
+								class="flex-1 py-1.5 bg-[#ffc700] hover:bg-[#fde047] rounded text-xs font-bold text-black border border-black/40 shadow-xs cursor-pointer"
+							>
+								🎲 ROLL GEM
+							</button>
+							<div class="flex items-center gap-1 text-[10px] font-bold text-slate-500">
+								<span>● 1P</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-3 text-[10px] font-bold text-center text-slate-500">
+						Dot Matrix Handheld Edition
+					</div>
+				</div>
+
+				<!-- BENTO 4: 💖 MY POCKET TOOLKIT (Personal Favorites Tray) -->
+				<div id="my-toolkit" class="neo-card p-5 border-[#fda4af] flex flex-col justify-between">
+					<div>
+						<div class="flex items-center justify-between mb-1">
+							<h3 class="font-heading font-extrabold text-lg text-[var(--text-main)] flex items-center gap-1.5">
+								<span>💖</span> Pocket Toolkit
+							</h3>
+							<span id="savedBadgeCount" class="neo-pill bg-[#fda4af] text-black">
+								0
+							</span>
+						</div>
+						<p class="text-xs italic text-[var(--text-muted)] mb-3">
+							"Your saved gems, kept in your browser"
+						</p>
+
+						<!-- Saved items container -->
+						<div id="savedToolsList" class="space-y-2 min-h-[160px] max-h-[220px] overflow-y-auto custom-scroll pr-1">
+							<div class="py-8 text-center text-xs text-[var(--text-muted)] space-y-1">
+								<div class="text-2xl mb-1">🤍</div>
+								<p class="font-bold">Your toolkit is empty</p>
+								<p class="text-[11px] text-[var(--text-faint)]">Click the heart (🤍) on any tool to pin it here!</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-3 pt-3 border-t border-[var(--border-neo)]/20 flex items-center justify-between text-xs font-bold">
+						<span class="text-[10px] text-[var(--text-faint)]">Private & 100% Offline</span>
+						<button id="clearSavedBtn" type="button" class="text-red-500 hover:underline text-[11px] cursor-pointer hidden">
+							Clear all
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ===================================================================== -->
+		<!-- 5. CATEGORY FILTER CHIPS RIBBON (One-click quick jumps)              -->
+		<!-- ===================================================================== -->
+		<section id="categories-section" class="max-w-7xl mx-auto px-4 sm:px-8 py-6">
+			<div class="flex items-center justify-between mb-4">
+				<h2 class="font-heading font-extrabold text-2xl text-[var(--text-main)] flex items-center gap-2">
+					<span>🗂️</span> All Directory Categories
+				</h2>
+				<span class="text-xs font-bold text-[var(--text-muted)]">
+					{categories.length} Categories • {tools.length} Tools
+				</span>
+			</div>
+
+			<!-- Quick Filter Pills -->
+			<div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scroll text-xs font-bold select-none">
+				<a href="#all" class="neo-pill bg-[var(--text-main)] text-[var(--bg-card)] whitespace-nowrap">
+					⚡ All
+				</a>
+				{categories.map((cat) => {
+					const meta = categoryMeta[cat] || { icon: "📁", subtitle: "" };
+					const catCount = tools.filter((t) => t.category === cat).length;
+					return (
+						<a 
+							href={`#${toSlug(cat)}`} 
+							class="neo-pill bg-[var(--bg-card)] hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] whitespace-nowrap flex items-center gap-1.5 transition"
+						>
+							<span>{meta.icon}</span>
+							<span>{cat}</span>
+							<span class="text-[10px] opacity-60 font-mono">({catCount})</span>
+						</a>
+					);
+				})}
+			</div>
+		</section>
+
+		<!-- ===================================================================== -->
+		<!-- 6. MAIN DIRECTORY CARDS (Neo-Brutalist Bento Category Grid)          -->
+		<!-- ===================================================================== -->
+		<main class="max-w-7xl mx-auto px-4 sm:px-8 pb-20 space-y-12">
+			{categories.map((cat) => {
+				const categoryTools = tools.filter((t) => t.category === cat);
+				const meta = categoryMeta[cat] || { icon: "📁", subtitle: "Handpicked tools & resources" };
+				const slug = toSlug(cat);
+
+				return (
+					<section id={slug} class="scroll-mt-24">
+						<!-- Category Card Header -->
+						<div class="neo-card p-6 mb-6 bg-[var(--bg-card)]">
+							<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b-2 border-[var(--border-neo)]/20">
+								<div>
+									<h3 class="font-heading font-extrabold text-2xl text-[var(--text-main)] flex items-center gap-2.5">
+										<span class="text-3xl">{meta.icon}</span>
+										<span>{cat}</span>
+									</h3>
+									<p class="text-xs italic text-[var(--text-muted)] mt-1">
+										"{meta.subtitle}"
+									</p>
+								</div>
+								<div class="flex items-center gap-2">
+									<span class="neo-pill bg-[#ffc700] text-black">
+										{categoryTools.length} tools
+									</span>
+									<a href={`#${slug}`} class="neo-btn bg-[var(--bg-card-alt)] px-2.5 py-1 text-xs" title="Copy section link">
+										🔗
+									</a>
+								</div>
+							</div>
+
+							<!-- Grid of tools inside this category -->
+							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+								{categoryTools.map((tool) => {
+									const isStarred = tool.pricing?.includes("⭐");
+									const domain = getDomain(tool.url);
+
+									return (
+										<div class="neo-card-interactive p-4 bg-[var(--bg-canvas)] flex flex-col justify-between group">
+											<div>
+												<!-- Tool Header: Favicon, Name, Heart -->
+												<div class="flex items-start justify-between gap-2 mb-2">
+													<div class="flex items-center gap-2 min-w-0">
+														<img 
+															src={`https://www.google.com/s2/favicons?domain=${domain}&sz=64`} 
+															alt="" 
+															class="w-5 h-5 rounded-xs flex-shrink-0"
+															loading="lazy"
+														/>
+														<a 
+															href={tool.url} 
+															target="_blank" 
+															rel="noopener noreferrer" 
+															class="font-heading font-bold text-sm text-[var(--text-main)] hover:text-amber-500 truncate transition"
+															title={tool.name}
+														>
+															{tool.name}
+														</a>
+													</div>
+
+													<!-- Heart bookmark button -->
+													<button 
+														type="button" 
+														class="bookmark-btn text-base hover:scale-125 transition flex-shrink-0 p-1 cursor-pointer"
+														data-tool={JSON.stringify({ name: tool.name, url: tool.url, category: tool.category, pricing: tool.pricing || "" })}
+														title="Save to Pocket Toolkit"
+													>
+														🤍
+													</button>
+												</div>
+
+												<!-- Pricing / Status Badge -->
+												{tool.pricing && (
+													<div class="mb-2">
+														<span class={`inline-block text-[10px] font-bold font-mono px-2 py-0.5 rounded border border-[var(--border-neo)] shadow-[1px_1px_0px_var(--shadow-neo)] ${
+															isStarred ? 'bg-[#fef08a] text-black' : 'bg-[var(--bg-card)] text-[var(--text-muted)]'
+														}`}>
+															{tool.pricing}
+														</span>
+													</div>
+												)}
+
+												<!-- Description -->
+												<p class="text-xs text-[var(--text-muted)] leading-relaxed line-clamp-3">
+													{tool.description}
+												</p>
+											</div>
+
+											<!-- Action Row: Copy Link & Open Arrow -->
+											<div class="mt-4 pt-3 border-t border-[var(--border-neo)]/15 flex items-center justify-between text-xs">
+												<button 
+													type="button" 
+													class="copy-link-btn text-[11px] font-bold text-[var(--text-faint)] hover:text-[var(--text-main)] flex items-center gap-1 cursor-pointer"
+													data-url={tool.url}
+												>
+													<span>📋</span> Copy link
+												</button>
+
+												<a 
+													href={tool.url} 
+													target="_blank" 
+													rel="noopener noreferrer" 
+													class="neo-btn bg-[var(--text-main)] text-[var(--bg-card)] px-3 py-1 text-xs flex items-center gap-1 font-bold group-hover:bg-[#ffc700] group-hover:text-black transition"
+												>
+													<span>Visit</span>
+													<span>↗</span>
+												</a>
+											</div>
+										</div>
+									);
+								})}
+							</div>
+						</div>
+					</section>
+				);
+			})}
+		</main>
+
+		<!-- ===================================================================== -->
+		<!-- 7. FLOATING SPOTLIGHT SEARCH MODAL (Ctrl + K)                         -->
+		<!-- ===================================================================== -->
+		<div id="searchModal" class="fixed inset-0 z-50 flex items-start justify-center pt-12 sm:pt-20 px-4 bg-black/60 backdrop-blur-xs hidden">
+			<div class="neo-card w-full max-w-3xl bg-[var(--bg-card)] shadow-[8px_8px_0px_#000] overflow-hidden flex flex-col max-h-[82vh]">
+				
+				<!-- Top Input Row -->
+				<div class="p-4 border-b-2 border-[var(--border-neo)] flex items-center gap-3 bg-[var(--bg-canvas)]">
+					<span class="text-xl">🔍</span>
+					<input
+						type="text"
+						id="modalSearchInput"
+						placeholder="Search 2,300+ tools, categories, keywords..."
+						autocomplete="off"
+						class="w-full text-base bg-transparent focus:outline-none text-[var(--text-main)] placeholder:text-[var(--text-muted)] font-bold"
+					/>
+					<button id="clearSearchBtn" type="button" class="text-slate-400 hover:text-black p-1 text-sm font-bold hidden cursor-pointer">
+						✕
+					</button>
+					<kbd class="px-2 py-0.5 text-[10px] font-mono bg-[var(--bg-card)] border border-[var(--border-neo)] rounded shadow-xs">
+						ESC
+					</kbd>
+				</div>
+
+				<!-- Stats and Category Filter Tabs -->
+				<div class="px-4 py-2 border-b-2 border-[var(--border-neo)]/20 bg-[var(--bg-card)] flex flex-col gap-2">
+					<div class="flex items-center justify-between text-xs text-[var(--text-muted)] font-bold">
+						<span id="matchStats">Showing all tools</span>
+						<span class="font-mono">Total: {tools.length}</span>
+					</div>
+					<div id="categoryTabs" class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs custom-scroll">
+						<!-- Injected via JavaScript -->
+					</div>
+				</div>
+
+				<!-- Results Container -->
+				<div id="searchResults" class="p-4 overflow-y-auto flex-1 custom-scroll space-y-4 bg-[var(--bg-canvas)]">
+					<!-- Injected via JavaScript -->
+				</div>
+
+				<!-- Footer -->
+				<div class="px-4 py-2.5 bg-[var(--bg-card)] border-t-2 border-[var(--border-neo)] flex items-center justify-between text-xs font-bold text-[var(--text-muted)]">
+					<span>Press <kbd class="px-1.5 py-0.5 bg-[var(--bg-card-alt)] border border-[var(--border-neo)] rounded text-[10px]">ESC</kbd> to exit</span>
+					<span class="text-amber-500 font-extrabold">⚡ Instant Browser Search</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- ===================================================================== -->
+		<!-- 8. RANDOM TOOL MODAL ("Surprise Me!" Celebration Drawer)              -->
+		<!-- ===================================================================== -->
+		<div id="randomModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs hidden">
+			<div class="neo-card w-full max-w-lg bg-[var(--bg-card)] shadow-[8px_8px_0px_#000] p-6 text-center space-y-4">
+				<div class="text-4xl animate-bounce">🎲</div>
+				<div class="inline-block px-3 py-1 rounded-full bg-[#ffc700] text-black text-xs font-extrabold uppercase tracking-wide border border-black">
+					Random Discovery
+				</div>
+				<h3 id="randomToolName" class="font-heading font-extrabold text-2xl text-[var(--text-main)]">
+					Tool Name
+				</h3>
+				<p id="randomToolDesc" class="text-sm text-[var(--text-muted)] leading-relaxed">
+					Tool description will appear here.
+				</p>
+				<div class="flex items-center justify-center gap-3 pt-2">
+					<button id="rollAnotherBtn" type="button" class="neo-btn bg-[var(--bg-card-alt)] px-4 py-2 text-xs">
+						🎲 Roll Another
+					</button>
+					<a id="randomVisitBtn" href="#" target="_blank" rel="noopener noreferrer" class="neo-btn bg-[#ffc700] text-black px-5 py-2 text-xs font-extrabold">
+						Visit Site ↗
+					</a>
+					<button id="closeRandomModalBtn" type="button" class="neo-btn bg-slate-200 dark:bg-slate-700 px-3 py-2 text-xs">
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- ===================================================================== -->
+		<!-- 9. TOAST NOTIFICATION CONTAINER                                       -->
+		<!-- ===================================================================== -->
+		<div id="toastBox" class="fixed bottom-6 right-6 z-50 pointer-events-none flex flex-col gap-2"></div>
+
+		<!-- ===================================================================== -->
+		<!-- 10. CLIENT-SIDE JAVASCRIPT (Favorites, Search, Retro Arcade, Theme)   -->
+		<!-- ===================================================================== -->
+		<script define:vars={{ toolsData: tools }}>
+			// -------------------------------------------------------------
+			// A. THEME TOGGLE (Paper Mode vs Chalkboard Dark Mode)
+			// -------------------------------------------------------------
+			const themeToggleBtn = document.getElementById("themeToggleBtn");
+			const themeIcon = document.getElementById("themeIcon");
+
+			function syncThemeUI() {
+				const isDark = document.documentElement.classList.contains("theme-dark");
+				if (themeIcon) themeIcon.textContent = isDark ? "🌙" : "☀️";
+			}
+
+			themeToggleBtn?.addEventListener("click", () => {
+				const isDark = document.documentElement.classList.toggle("theme-dark");
+				localStorage.setItem("everytool-theme", isDark ? "dark" : "light");
+				syncThemeUI();
+				showToast(isDark ? "Switched to Chalkboard Dark Mode 🌙" : "Switched to Paper Light Mode ☀️");
+			});
+
+			syncThemeUI();
+
+			// -------------------------------------------------------------
+			// B. TOAST NOTIFICATIONS
+			// -------------------------------------------------------------
+			function showToast(message) {
+				const toastBox = document.getElementById("toastBox");
+				if (!toastBox) return;
+
+				const toast = document.createElement("div");
+				toast.className = "neo-card px-4 py-2.5 bg-[#ffc700] text-black font-bold text-xs shadow-[4px_4px_0px_#000] pointer-events-auto transform translate-y-2 opacity-0 transition-all duration-200";
+				toast.textContent = message;
+
+				toastBox.appendChild(toast);
+				requestAnimationFrame(() => {
+					toast.classList.remove("translate-y-2", "opacity-0");
+				});
+
+				setTimeout(() => {
+					toast.classList.add("opacity-0", "translate-y-2");
+					setTimeout(() => toast.remove(), 200);
+				}, 2500);
+			}
+
+			// -------------------------------------------------------------
+			// C. COPY LINK HELPER
+			// -------------------------------------------------------------
+			document.querySelectorAll(".copy-link-btn").forEach((btn) => {
+				btn.addEventListener("click", () => {
+					const url = btn.getAttribute("data-url");
+					if (url) {
+						navigator.clipboard.writeText(url).then(() => {
+							showToast("Link copied to clipboard! ✨");
+						});
+					}
+				});
+			});
+
+			// -------------------------------------------------------------
+			// D. POCKET TOOLKIT (SAVED FAVORITES IN LOCALSTORAGE)
+			// -------------------------------------------------------------
+			function getSavedTools() {
+				try {
+					return JSON.parse(localStorage.getItem("everytool-saved") || "[]");
+				} catch {
+					return [];
+				}
+			}
+
+			function setSavedTools(list) {
+				localStorage.setItem("everytool-saved", JSON.stringify(list));
+				renderSavedTools();
+				updateBookmarkButtons();
+			}
+
+			function renderSavedTools() {
+				const saved = getSavedTools();
+				const listEl = document.getElementById("savedToolsList");
+				const badgeCount = document.getElementById("savedBadgeCount");
+				const headerCount = document.getElementById("headerSavedCount");
+				const clearBtn = document.getElementById("clearSavedBtn");
+
+				if (badgeCount) badgeCount.textContent = saved.length;
+				if (headerCount) headerCount.textContent = saved.length;
+				if (clearBtn) clearBtn.classList.toggle("hidden", saved.length === 0);
+
+				if (!listEl) return;
+
+				if (saved.length === 0) {
+					listEl.innerHTML = `
+						<div class="py-8 text-center text-xs text-[var(--text-muted)] space-y-1">
+							<div class="text-2xl mb-1">🤍</div>
+							<p class="font-bold">Your toolkit is empty</p>
+							<p class="text-[11px] text-[var(--text-faint)]">Click the heart (🤍) on any tool to pin it here!</p>
+						</div>
+					`;
+					return;
+				}
+
+				listEl.innerHTML = saved
+					.map((item, idx) => `
+						<div class="flex items-center justify-between p-2 rounded-lg bg-[var(--bg-canvas)] border border-[var(--border-neo)]/20 text-xs">
+							<div class="flex items-center gap-2 min-w-0 pr-2">
+								<span class="font-mono font-bold text-[var(--text-faint)] text-[10px]">${idx + 1}.</span>
+								<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="font-bold truncate text-[var(--text-main)] hover:text-amber-500">
+									${item.name.split("/")[0].trim()}
+								</a>
+							</div>
+							<div class="flex items-center gap-1.5 flex-shrink-0">
+								<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-xs hover:text-amber-500 font-bold" title="Open">↗</a>
+								<button type="button" class="remove-saved-btn text-red-500 hover:scale-125 transition text-xs cursor-pointer p-0.5" data-name="${item.name}" title="Remove">✕</button>
+							</div>
+						</div>
+					`)
+					.join("");
+
+				listEl.querySelectorAll(".remove-saved-btn").forEach((btn) => {
+					btn.addEventListener("click", () => {
+						const name = btn.getAttribute("data-name");
+						const next = getSavedTools().filter((t) => t.name !== name);
+						setSavedTools(next);
+						showToast("Removed from toolkit");
+					});
+				});
+			}
+
+			function updateBookmarkButtons() {
+				const saved = getSavedTools();
+				const savedNames = new Set(saved.map((s) => s.name));
+
+				document.querySelectorAll(".bookmark-btn").forEach((btn) => {
+					try {
+						const data = JSON.parse(btn.getAttribute("data-tool"));
+						if (savedNames.has(data.name)) {
+							btn.textContent = "💖";
+							btn.title = "Saved in your toolkit!";
+						} else {
+							btn.textContent = "🤍";
+							btn.title = "Save to Pocket Toolkit";
+						}
+					} catch {}
+				});
+			}
+
+			document.querySelectorAll(".bookmark-btn").forEach((btn) => {
+				btn.addEventListener("click", () => {
+					try {
+						const tool = JSON.parse(btn.getAttribute("data-tool"));
+						let saved = getSavedTools();
+						const exists = saved.some((s) => s.name === tool.name);
+
+						if (exists) {
+							saved = saved.filter((s) => s.name !== tool.name);
+							setSavedTools(saved);
+							showToast(`Removed "${tool.name.split("/")[0]}" from toolkit`);
+						} else {
+							saved.push(tool);
+							setSavedTools(saved);
+							showToast(`Added "${tool.name.split("/")[0]}" to toolkit! 💖`);
+						}
+					} catch {}
+				});
+			});
+
+			document.getElementById("clearSavedBtn")?.addEventListener("click", () => {
+				if (confirm("Clear all your saved tools?")) {
+					setSavedTools([]);
+					showToast("Toolkit cleared");
+				}
+			});
+
+			renderSavedTools();
+			updateBookmarkButtons();
+
+			// -------------------------------------------------------------
+			// E. RETRO GAME BOY WIDGET (SNAKE / RANDOM GEM SIMULATOR)
+			// -------------------------------------------------------------
+			const retroScreenContent = document.getElementById("retroScreenContent");
+			const retroRollBtn = document.getElementById("retroRollBtn");
+			const retroResetBtn = document.getElementById("retroResetBtn");
+
+			function rollRetroGem() {
+				if (!retroScreenContent) return;
+				const randomIndex = Math.floor(Math.random() * toolsData.length);
+				const gem = toolsData[randomIndex];
+
+				retroScreenContent.innerHTML = `
+					<div class="text-xs uppercase opacity-70">★ DISCOVERED ★</div>
+					<div class="text-xl font-bold leading-tight truncate px-1 text-black">${gem.name.split("/")[0]}</div>
+					<div class="text-[11px] opacity-80 mt-1 line-clamp-2 px-1">${gem.description}</div>
+					<a href="${gem.url}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 px-2 py-0.5 bg-black text-[#9cad86] text-xs font-bold rounded">
+						LAUNCH APP ↗
+					</a>
+				`;
+			}
+
+			retroRollBtn?.addEventListener("click", rollRetroGem);
+			retroResetBtn?.addEventListener("click", () => {
+				if (!retroScreenContent) return;
+				retroScreenContent.innerHTML = `
+					<div class="text-3xl leading-none mb-1">🕹️</div>
+					<div class="text-base font-bold leading-tight uppercase">READY PLAYER 1</div>
+					<div class="text-xs opacity-75 mt-1">TAP BUTTON TO ROLL GEM OR PLAY SNAKE</div>
+				`;
+			});
+
+			// -------------------------------------------------------------
+			// F. RANDOM TOOL MODAL ("Surprise Me!")
+			// -------------------------------------------------------------
+			const randomModal = document.getElementById("randomModal");
+			const diceRollBtn = document.getElementById("diceRollBtn");
+			const quickRandomBtn = document.getElementById("quickRandomBtn");
+			const randomToolName = document.getElementById("randomToolName");
+			const randomToolDesc = document.getElementById("randomToolDesc");
+			const randomVisitBtn = document.getElementById("randomVisitBtn");
+			const rollAnotherBtn = document.getElementById("rollAnotherBtn");
+			const closeRandomModalBtn = document.getElementById("closeRandomModalBtn");
+
+			function openRandomModal() {
+				const randomIndex = Math.floor(Math.random() * toolsData.length);
+				const gem = toolsData[randomIndex];
+
+				if (randomToolName) randomToolName.textContent = gem.name;
+				if (randomToolDesc) randomToolDesc.textContent = gem.description;
+				if (randomVisitBtn) randomVisitBtn.href = gem.url;
+
+				randomModal?.classList.remove("hidden");
+			}
+
+			diceRollBtn?.addEventListener("click", openRandomModal);
+			quickRandomBtn?.addEventListener("click", openRandomModal);
+			rollAnotherBtn?.addEventListener("click", openRandomModal);
+
+			closeRandomModalBtn?.addEventListener("click", () => {
+				randomModal?.classList.add("hidden");
+			});
+
+			randomModal?.addEventListener("click", (e) => {
+				if (e.target === randomModal) randomModal.classList.add("hidden");
+			});
+
+			// -------------------------------------------------------------
+			// G. SPOTLIGHT SEARCH MODAL ENGINE (Ctrl + K)
+			// -------------------------------------------------------------
+			const searchModal = document.getElementById("searchModal");
+			const searchBarTrigger = document.getElementById("searchBarTrigger");
+			const searchBtnIcon = document.getElementById("searchBtnIcon");
+			const modalSearchInput = document.getElementById("modalSearchInput");
+			const clearSearchBtn = document.getElementById("clearSearchBtn");
+			const matchStats = document.getElementById("matchStats");
+			const categoryTabs = document.getElementById("categoryTabs");
+			const searchResults = document.getElementById("searchResults");
+
+			let currentCategoryFilter = "All";
+
+			function openSearch() {
+				searchModal?.classList.remove("hidden");
+				document.body.style.overflow = "hidden";
+				modalSearchInput?.focus();
+				renderSearchResults();
+			}
+
+			function closeSearch() {
+				searchModal?.classList.add("hidden");
+				document.body.style.overflow = "";
+				if (modalSearchInput) modalSearchInput.value = "";
+				clearSearchBtn?.classList.add("hidden");
+				currentCategoryFilter = "All";
+			}
+
+			searchBarTrigger?.addEventListener("click", openSearch);
+			searchBtnIcon?.addEventListener("click", openSearch);
+
+			searchModal?.addEventListener("click", (e) => {
+				if (e.target === searchModal) closeSearch();
+			});
+
+			clearSearchBtn?.addEventListener("click", () => {
+				if (modalSearchInput) {
+					modalSearchInput.value = "";
+					clearSearchBtn.classList.add("hidden");
+					modalSearchInput.focus();
+					renderSearchResults();
+				}
+			});
+
+			window.addEventListener("keydown", (e) => {
+				if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+					e.preventDefault();
+					if (searchModal?.classList.contains("hidden")) {
+						openSearch();
+					} else {
+						closeSearch();
+					}
+				}
+				if (e.key === "Escape") {
+					if (!searchModal?.classList.contains("hidden")) closeSearch();
+					if (!randomModal?.classList.contains("hidden")) randomModal?.classList.add("hidden");
+				}
+			});
+
+			function highlightText(text, query) {
+				if (!query) return text;
+				const escaped = query.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
+				const regex = new RegExp(`(${escaped})`, "gi");
+				return text.replace(regex, '<mark class="bg-[#ffc700] text-black px-1 rounded font-bold">$1</mark>');
+			}
+
+			function renderSearchResults() {
+				if (!searchResults) return;
+				const query = modalSearchInput?.value.trim().toLowerCase() || "";
+				clearSearchBtn?.classList.toggle("hidden", query.length === 0);
+
+				let matched = toolsData.filter((tool) => {
+					if (!query) return true;
+					const str = `${tool.name} ${tool.category} ${tool.description} ${tool.pricing}`.toLowerCase();
+					return str.includes(query);
+				});
+
+				const catCounts = {};
+				matched.forEach((t) => {
+					catCounts[t.category] = (catCounts[t.category] || 0) + 1;
+				});
+
+				// Build category tabs
+				if (categoryTabs) {
+					let tabs = `
+						<button type="button" data-cat="All" class="neo-pill cursor-pointer transition ${currentCategoryFilter === 'All' ? 'bg-[#ffc700] text-black' : 'bg-[var(--bg-canvas)] text-[var(--text-main)]'}">
+							All (${matched.length})
+						</button>
+					`;
+					Object.keys(catCounts).forEach((c) => {
+						const active = currentCategoryFilter === c;
+						tabs += `
+							<button type="button" data-cat="${c}" class="neo-pill cursor-pointer whitespace-nowrap transition ${active ? 'bg-[#ffc700] text-black' : 'bg-[var(--bg-canvas)] text-[var(--text-main)]'}">
+								${c} (${catCounts[c]})
+							</button>
+						`;
+					});
+					categoryTabs.innerHTML = tabs;
+
+					categoryTabs.querySelectorAll("button").forEach((b) => {
+						b.addEventListener("click", () => {
+							currentCategoryFilter = b.getAttribute("data-cat");
+							renderSearchResults();
+						});
+					});
+				}
+
+				if (currentCategoryFilter !== "All") {
+					matched = matched.filter((t) => t.category === currentCategoryFilter);
+				}
+
+				if (matchStats) {
+					matchStats.textContent = query ? `Found ${matched.length} tools for "${query}"` : `Showing all ${matched.length} tools`;
+				}
+
+				if (matched.length === 0) {
+					searchResults.innerHTML = `
+						<div class="py-12 text-center text-[var(--text-muted)] space-y-2">
+							<div class="text-4xl">🔍</div>
+							<p class="font-bold">No tools found matching "${query}"</p>
+							<p class="text-xs">Try searching for keywords like "adblock", "ai", "video", or "games"</p>
+						</div>
+					`;
+					return;
+				}
+
+				searchResults.innerHTML = matched.slice(0, 100).map((tool) => {
+					const nameHighlighted = highlightText(tool.name, query);
+					const descHighlighted = highlightText(tool.description, query);
+					return `
+						<div class="neo-card p-3.5 bg-[var(--bg-card)] flex items-center justify-between gap-3 group">
+							<div class="min-w-0 flex-1">
+								<div class="flex items-center gap-2 mb-1">
+									<a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="font-heading font-bold text-sm text-[var(--text-main)] hover:text-amber-500 truncate">
+										${nameHighlighted}
+									</a>
+									<span class="text-[10px] font-bold px-1.5 py-0.5 bg-[var(--bg-card-alt)] rounded border border-[var(--border-neo)]/30 text-[var(--text-muted)]">
+										${tool.category}
+									</span>
+								</div>
+								<p class="text-xs text-[var(--text-muted)] line-clamp-1">
+									${descHighlighted}
+								</p>
+							</div>
+							<a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="neo-btn bg-[var(--text-main)] text-[var(--bg-card)] px-3 py-1 text-xs group-hover:bg-[#ffc700] group-hover:text-black transition flex-shrink-0">
+								Open ↗
+							</a>
+						</div>
+					`;
+				}).join("");
+			}
+
+			modalSearchInput?.addEventListener("input", () => {
+				currentCategoryFilter = "All";
+				renderSearchResults();
+			});
+		</script>
+	</body>
+</html>

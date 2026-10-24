@@ -1,0 +1,2338 @@
+[
+  {
+    "name": "uBlock Origin / AdGuard / uBO Lite / Note",
+    "url": "https://github.com/gorhill/uBlock",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Adblockers / Redundant Extensions"
+  },
+  {
+    "name": "SponsorBlock",
+    "url": "https://sponsor.ajay.app/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Skip Sponsored YouTube Ads / X / Subreddit / Discord / GitHub"
+  },
+  {
+    "name": "Disblock Origin / Discord Adblock",
+    "url": "https://codeberg.org/AllPurposeMat/Disblock-Origin",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Hide Discord Nitro / Boost Ads"
+  },
+  {
+    "name": "Popup Blocker (strict) / Popupblocker All / PopupBlocker",
+    "url": "https://github.com/schomery/popup-blocker",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Popup Blockers / Note"
+  },
+  {
+    "name": "BehindTheOverlay",
+    "url": "https://github.com/NicolaeNMV/BehindTheOverlay",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Hide Website Overlays"
+  },
+  {
+    "name": "BilibiliSponsorBlock",
+    "url": "https://www.bsbsb.top/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Skip Sponsored Bilibili Ads / GitHub"
+  },
+  {
+    "name": "YouT-ube / MUI Tube",
+    "url": "https://www.yout-ube.com/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Bypass YouTubes Forced uBO Player Delay"
+  },
+  {
+    "name": "FilterLists",
+    "url": "https://filterlists.com/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Filter / Host List Directory"
+  },
+  {
+    "name": "LegitimateURLShortener",
+    "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/LegitimateURLShortener.txt",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Query Parameter Cleaning Rules / Use with AdGuard URL Tracking Protection"
+  },
+  {
+    "name": "HaGeZi Blocklists / Host Format",
+    "url": "https://github.com/hagezi/dns-blocklists",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Blocklist Collection / Use Mini Editions / Note"
+  },
+  {
+    "name": "hBlock",
+    "url": "https://hblock.molinero.dev/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Blocklist Collection / GitHub"
+  },
+  {
+    "name": "FMHY Filterlist",
+    "url": "https://github.com/fmhy/FMHYFilterlist",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Unsafe Sites Filter"
+  },
+  {
+    "name": "AI uBlock Blacklist",
+    "url": "https://github.com/alvi-se/ai-ublock-blacklist",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Blocks AI Generated Sites"
+  },
+  {
+    "name": "DNS Providers",
+    "url": "https://adguard-dns.io/kb/general/dns-providers/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "DNS Provider Index"
+  },
+  {
+    "name": "Pi-Hole",
+    "url": "https://pi-hole.net/",
+    "category": "Adblocking / Privacy",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Self-Hosted DNS Adblocking / X / Subreddit / GitHub"
+  },
+  {
+    "name": "DeepSeek",
+    "url": "https://chat.deepseek.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "DeepSeek-V4.1-Flash / Sign-Up / Unlimited / Add Features / Subreddit / Discord / GitHub"
+  },
+  {
+    "name": "Qwen Studio",
+    "url": "https://chat.qwen.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Qwen3.8 Max / Qwen3.7 Plus / No Sign-Up / Clear Cookies to Reset Limits / Subreddit / Discord / GitHub"
+  },
+  {
+    "name": "⁠Z.ai",
+    "url": "https://chat.z.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "GLM 5.3 / GLM 5.3 Flash / Agent / Slides / Sign-Up / Discord / GitHub"
+  },
+  {
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com/app/prompts/new_chat",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Gemini 3.8 Flash / Gemini 3.1 Pro Preview / Gemini 3.5 Flash-Lite / Google Sign-Up / Add Features / Subreddit / Discord"
+  },
+  {
+    "name": "Meta AI",
+    "url": "https://www.meta.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Muse Spark 1.2 / Muse Glimmer 30B / Meta Sign-Up / Unlimited"
+  },
+  {
+    "name": "Kimi",
+    "url": "https://www.kimi.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Slides / Google Login or Phone # Required / Subreddit / Discord / GitHub"
+  },
+  {
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "GPT-6 Luna / Unlimited / Add Features / Limits / r/OpenAI / r/ChatGPT / Discord"
+  },
+  {
+    "name": "⁠LongCat",
+    "url": "https://longcat.ai/chat/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "LongCat 2.0 / Sign-Up / Unlimited / X"
+  },
+  {
+    "name": "Tencent AI Studio",
+    "url": "https://aistudio.tencent.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "⁠Hy3 / Unlimited / Sign-Up"
+  },
+  {
+    "name": "⁠MiMo Studio",
+    "url": "https://aistudio.xiaomimimo.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "MiMo-V2.6-Pro / MiMo-V2.6 flash / Sign-Up"
+  },
+  {
+    "name": "Grok",
+    "url": "https://grok.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Grok 4.6 / Agent / Traffic-Based / Rate Display, 2 / Subreddit / Discord"
+  },
+  {
+    "name": "Gemini",
+    "url": "https://gemini.google.com/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Gemini 3.5 Flash-Lite / Add Features / Limits / Subreddit / Discord"
+  },
+  {
+    "name": "Microsoft Copilot",
+    "url": "https://copilot.microsoft.com",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "GPT-5.2 (Think Deeper) / Sign-Up / Limits"
+  },
+  {
+    "name": "Claude",
+    "url": "https://claude.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Claude Sonnet 5.5 / Requires Sign-Up + Sometimes Phone # / Add Features / Resources / Learning, 2 / Usage Tracker / Subreddit / Discord"
+  },
+  {
+    "name": "⁠Chat Motif",
+    "url": "https://chat.motiftech.io/chat",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Motif 3 / Unlimited"
+  },
+  {
+    "name": "MiniMax AI",
+    "url": "https://agent.minimax.io/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "MiniMax M3 / Agent / Sign-Up / GitHub"
+  },
+  {
+    "name": "Mistral / Mistral Studio",
+    "url": "https://chat.mistral.ai",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Mistral Medium 3.5 / Subreddit / Discord"
+  },
+  {
+    "name": "⁠Ai2 Playground",
+    "url": "https://playground.allenai.org/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Olmo 3.1 32B Think / No Sign-Up / Unlimited / Discord"
+  },
+  {
+    "name": "⁠Solar",
+    "url": "https://solar-chat.upstage.ai/",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Solar Pro 4 / No Sign-Up / Discord"
+  },
+  {
+    "name": "⁠Solar Playground",
+    "url": "https://console.upstage.ai/playground/chat",
+    "category": "Artificial Intelligence",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Solar Pro 4 / No Sign-Up / Discord"
+  },
+  {
+    "name": "Movy",
+    "url": "https://www.movy.sx/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / 4K / Auto-Next"
+  },
+  {
+    "name": "Cinejoy",
+    "url": "https://cinejoy.pk/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next"
+  },
+  {
+    "name": "PopcornMovies / BingeBox",
+    "url": "https://popcornmovies.ac/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next"
+  },
+  {
+    "name": "7Movies",
+    "url": "https://7movies.ac/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next / Discord / Telegram"
+  },
+  {
+    "name": "Atlantic",
+    "url": "https://atlantic.st/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next / 4K / Discord"
+  },
+  {
+    "name": "ShuttleTV",
+    "url": "https://shuttletv.su/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "FlyStream",
+    "url": "https://flystream.net/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next / 4K / Discord"
+  },
+  {
+    "name": "Rive / CorsFlix",
+    "url": "https://www.rivestream.app/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Movies / TV / Anime / Auto-Next / 4K / Status / Discord"
+  },
+  {
+    "name": "Flixer / Hexa",
+    "url": "https://flixer.gd",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next"
+  },
+  {
+    "name": "Vivarium",
+    "url": "https://vivarium.su/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "MeowTV / FlickyStream",
+    "url": "https://meowtv.ru/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "CineLite",
+    "url": "https://cinelite.xyz/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / 4K"
+  },
+  {
+    "name": "Streamo",
+    "url": "https://streamo.st/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "ArrowTV / Cinezo",
+    "url": "https://arrowtv.net/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "dulo",
+    "url": "https://dulo.mov/",
+    "category": "Movies / TV / Anime",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Movies / TV / Anime / Auto-Next / Discord"
+  },
+  {
+    "name": "/music streaming/ / Wiki Comparisons",
+    "url": "https://rentry.co/musicstreaming",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Streaming Service Comparisons"
+  },
+  {
+    "name": "⁠Limusic",
+    "url": "https://simohypers.github.io/limusic/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "YouTube Music Client / Windows, macOS, Linux / GitHub"
+  },
+  {
+    "name": "Sonora",
+    "url": "https://sonorahq.org/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Music Client / Discord / GitHub"
+  },
+  {
+    "name": "WAVE",
+    "url": "https://waveapp.pages.dev/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Music Client / FLAC / GitHub"
+  },
+  {
+    "name": "Pear Desktop",
+    "url": "https://github.com/pear-devs/pear-desktop",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Music Client / Ad-Block Guide"
+  },
+  {
+    "name": "BeatBoss",
+    "url": "https://beatboss.thevolecitor.qzz.io/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Cross-Platform Plugin-Based Player / Web App / GitHub / Discord"
+  },
+  {
+    "name": "yewtube",
+    "url": "https://github.com/mps-youtube/yewtube",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Music Client"
+  },
+  {
+    "name": "⁠Volta",
+    "url": "https://volta-music.com/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Streaming / Discord"
+  },
+  {
+    "name": "pulse / Beatsync",
+    "url": "https://473999.net/pulse",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Listen Together / Listening Parties"
+  },
+  {
+    "name": "BetterSoundcloud",
+    "url": "https://alirezakj.com/bsc/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Soundcloud Client / Ad-Free / GitHub"
+  },
+  {
+    "name": "Nuclear",
+    "url": "https://nuclearplayer.com/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Streaming / Discord / GitHub"
+  },
+  {
+    "name": "FunkWhale",
+    "url": "https://funkwhale.audio/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Decentralized Streaming Platform"
+  },
+  {
+    "name": "Muffon",
+    "url": "https://muffon.netlify.app/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Streaming"
+  },
+  {
+    "name": "⁠Squidify Desktop",
+    "url": "https://github.com/kobayashi90/squidify-desktop",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Game & Anime Soundtracks Streaming App"
+  },
+  {
+    "name": "YouTube Music / ⁠Ytify / Telegram",
+    "url": "https://music.youtube.com/",
+    "category": "Music / Podcasts / Radio",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "YouTube Music WebUIs / Tools"
+  },
+  {
+    "name": "r/PiratedGames Mega / CS.RIN Mega / privateersclub",
+    "url": "https://rentry.org/pgames",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Piracy Indexes"
+  },
+  {
+    "name": "Wotaku / EverythingMoe",
+    "url": "https://wotaku.wiki/games",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Otaku Games Indexes"
+  },
+  {
+    "name": "CS.RIN.RU",
+    "url": "https://cs.rin.ru/forum",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Sign-Up / PW: cs.rin.ru / csrin.org / .onion"
+  },
+  {
+    "name": "AnkerGames",
+    "url": "https://ankergames.net/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Torrent (Sign-Up, 7 Monthly) / Pre-Installed / Fluxer / Subreddit / Discord"
+  },
+  {
+    "name": "SteamRIP",
+    "url": "https://steamrip.com/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Pre-Installed / PW: steamrip.com / Subreddit / Discord"
+  },
+  {
+    "name": "AstralGames",
+    "url": "https://astralgames.net/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Achievements / Pre-Installed / Subreddit / Discord"
+  },
+  {
+    "name": "GameBounty",
+    "url": "https://gamebounty.world/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Pre-installed / Achievements / Discord"
+  },
+  {
+    "name": "⁠Kryoto",
+    "url": "https://kryo.to/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Pre-Installed / Launcher / Subreddit / Discord"
+  },
+  {
+    "name": "SteamUnderground",
+    "url": "https://steamunderground.net/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Pre-Installed / Discord"
+  },
+  {
+    "name": "⁠GOG Revived",
+    "url": "https://gog-rev.com/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Torrent / GOG Games Only / Discord"
+  },
+  {
+    "name": "Online Fix",
+    "url": "https://online-fix.me/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Torrent / Multiplayer / PW: online-fix.me / Use Translator / Telegram / Discord"
+  },
+  {
+    "name": "ZeiGames",
+    "url": "https://zeigames.com/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Pre-Installed / Multiplayer / Discord"
+  },
+  {
+    "name": "Ova Games",
+    "url": "https://www.ovagames.com/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / PW: www.ovagames.com / Requires Redirect Bypass"
+  },
+  {
+    "name": "Torrminatorr",
+    "url": "https://forum.torrminatorr.com/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Download / Forum / Requires Sign-Up"
+  },
+  {
+    "name": "⁠HizSearch / Steam Button / Virgil Game Search / Game Download CSE / Game Torrent CSE / r/PiratedGames CSE",
+    "url": "https://hizsearch.pages.dev/",
+    "category": "Gaming / Emulation",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Multi-Site Search Engines"
+  },
+  {
+    "name": "Open Slum",
+    "url": "https://open-slum.org/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Book Site Index / Uptime Tracking"
+  },
+  {
+    "name": "Anna's Archive",
+    "url": "https://annas-archive.gl/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Comics / Mirrors / Deploy Locally / Matrix / Subreddit"
+  },
+  {
+    "name": "Z-Library / 4 / 5 / 6 / 7 / 8 / 9",
+    "url": "https://z-lib.gd/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Comics / Apps / Extensions, 2 / .onion, 2 / Subreddit"
+  },
+  {
+    "name": "Mobilism",
+    "url": "https://forum.mobilism.org",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Audiobooks / Magazines / Newspapers / Comics / Ranks"
+  },
+  {
+    "name": "Bookracy",
+    "url": "https://bookracy.com/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Comics / Manga / Download Button"
+  },
+  {
+    "name": "MyAnonaMouse",
+    "url": "https://www.myanonamouse.net/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Audiobooks / Comics / Sheet Music / Torrents / Requires Invite"
+  },
+  {
+    "name": "Library Genesis",
+    "url": "https://libgen.li/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books / Comics / Manga / Tools / Mirrors / Subreddit"
+  },
+  {
+    "name": "Unglue.it",
+    "url": "https://unglue.it/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Books"
+  },
+  {
+    "name": "JustFreeBooks / Reading CSE / 4 / Recherche",
+    "url": "https://www.justfreebooks.info/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Multi-Site Book Search"
+  },
+  {
+    "name": "Internet Archive",
+    "url": "https://archive.org/details/texts",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Books / Audiobooks / Magazines / Newspapers / Tools"
+  },
+  {
+    "name": "Open Library",
+    "url": "https://openlibrary.org/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Books / GitHub"
+  },
+  {
+    "name": "WeLib",
+    "url": "https://welib.org/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Anna's Archive Mirror / Account Required for Downloads / Unofficial"
+  },
+  {
+    "name": "BookSee",
+    "url": "https://en.booksee.org/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Book Search / Download"
+  },
+  {
+    "name": "BDeBooks",
+    "url": "https://bdebooks.com/en/ebooks/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Books / Download"
+  },
+  {
+    "name": "⁠eBookoz",
+    "url": "https://ebookoz.net/",
+    "category": "Books / Comics / Manga",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Books / Download / Forum"
+  },
+  {
+    "name": "Adobe Alternatives",
+    "url": "https://github.com/KenneyNL/Adobe-Alternatives",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Adobe Software Alternative Index"
+  },
+  {
+    "name": "Virgil Software Search / Software CSE",
+    "url": "https://virgil.samidy.com/?engine=software",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Multi-Site Software Search"
+  },
+  {
+    "name": "CracksURL / Download Guide / Telegram",
+    "url": "https://cracksurl.com/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Soft98",
+    "url": "https://soft98.ir/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Use Translator"
+  },
+  {
+    "name": "Nsane Forums",
+    "url": "https://www.nsaneforums.com/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Requires Sign-Up"
+  },
+  {
+    "name": "Mobilism",
+    "url": "https://forum.mobilism.org/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Requires Sign-Up / User Ranks"
+  },
+  {
+    "name": "LRepacks",
+    "url": "https://lrepacks.net/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Avoid Redirects / Use Adblock + Translator"
+  },
+  {
+    "name": "AlternativeTo / European Alternatives",
+    "url": "https://alternativeto.net/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Crowdsourced Recommendations"
+  },
+  {
+    "name": "DownloadHa",
+    "url": "https://www.downloadha.com/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Use Translator"
+  },
+  {
+    "name": "Moum",
+    "url": "https://moum.top/en/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "RetroSystemRevival",
+    "url": "https://retrosystemsrevival.blogspot.com/",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Oldschool Software"
+  },
+  {
+    "name": "Libreware",
+    "url": "https://t.me/Libreware",
+    "category": "Downloading",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Telegram Channels"
+  },
+  {
+    "name": "RuTracker",
+    "url": "https://rutracker.org/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Video / Audio / Comics / Magazines / Requires Sign-Up"
+  },
+  {
+    "name": "m0nkrus",
+    "url": "https://rentry.co/FMHYB64#m0nkrus",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Editing Software"
+  },
+  {
+    "name": "1337x / 4 / 5",
+    "url": "https://1337x.to/home/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Mirrors / User Ranks"
+  },
+  {
+    "name": "RARBG Dump",
+    "url": "https://rarbgdump.com/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Games / Books / Continuation Project"
+  },
+  {
+    "name": "LimeTorrents",
+    "url": "https://www.limetorrents.fun/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Books"
+  },
+  {
+    "name": "rutor.info",
+    "url": "https://rutor.is/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Books / ROMs / Magazines / Use Translator"
+  },
+  {
+    "name": "TR4KER",
+    "url": "https://tr4ker.net/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Books / Signup Required"
+  },
+  {
+    "name": "UZTracker",
+    "url": "https://uztracker.me",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Books / Use Translator"
+  },
+  {
+    "name": "NNM-Club",
+    "url": "https://nnmclub.to/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio"
+  },
+  {
+    "name": "Torrenting",
+    "url": "https://www.torrenting.com/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Video / Audio / Books / Requires Sign-Up"
+  },
+  {
+    "name": "Knaben.info",
+    "url": "https://knaben.info/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Torrent Site Proxies"
+  },
+  {
+    "name": "ExT / Proxy",
+    "url": "https://ext.to/",
+    "category": "Torrenting",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Official YT Documentary Channels",
+    "url": "https://github.com/superlincoln953/Free-Official-Youtube-Content?tab=readme-ov-file#Documentaries",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Documentary Channels"
+  },
+  {
+    "name": "IHaveNoTV",
+    "url": "https://ihavenotv.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "DocumentaryArea / Remove Watermark",
+    "url": "https://www.documentaryarea.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Documentary+",
+    "url": "https://www.docplus.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "1337x Documentaries",
+    "url": "https://1337x.to/top-100-documentaries",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Torrent"
+  },
+  {
+    "name": "YT Video Essay Hall of Fame",
+    "url": "https://docs.google.com/spreadsheets/d/1pMlfjJ4gb0vMt2xrQITBMzWypNHMj-lWKkK1KC6EjxA/edit?gid=88681539",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "YouTube Video Essay Archive / Frontend"
+  },
+  {
+    "name": "Top Documentary Films",
+    "url": "https://topdocumentaryfilms.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Thought Maybe",
+    "url": "https://thoughtmaybe.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Media Burn Archive",
+    "url": "https://mediaburn.org/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "ARTE",
+    "url": "https://www.arte.tv/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Documentary Storm",
+    "url": "https://www.documentarystorm.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Rocumentaries",
+    "url": "https://rocumentaries.com/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "PBS",
+    "url": "https://www.pbs.org/video/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Folkstreams",
+    "url": "https://www.folkstreams.net/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Films For Action",
+    "url": "https://www.filmsforaction.org/",
+    "category": "Educational",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Mobilism",
+    "url": "https://forum.mobilism.org/viewforum.php?f=398",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Requires Sign-Up / User Ranks"
+  },
+  {
+    "name": "4PDA",
+    "url": "https://4pda.to/forum/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Signup Required / Use Translator / App / Telegram / Captcha Note"
+  },
+  {
+    "name": "RockMods / Telegram",
+    "url": "https://www.rockmods.net/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "PlatinMods",
+    "url": "https://platinmods.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "PDALife / App / Telegram",
+    "url": "https://pdalife.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "AN1 / Telegram",
+    "url": "https://an1.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Virgil APK Search / Android APK CSE / Apps & Games Search",
+    "url": "https://virgil.samidy.com/?engine=android#gsc.tab=0",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "APK Search Engines"
+  },
+  {
+    "name": "APKVision / Request / Telegram / APKBomb",
+    "url": "https://apkvision.org/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "LiteAPKs / App / Telegram / Note",
+    "url": "https://liteapks.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Modyolo / Telegram / Note",
+    "url": "https://modyolo.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "⁠LeeAPK",
+    "url": "https://leeapk.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Nsane Forums",
+    "url": "https://nsaneforums.com/",
+    "category": "Android / iOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "ArchWiki",
+    "url": "https://wiki.archlinux.org/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Linux Guides / Manuals"
+  },
+  {
+    "name": "Linux Journey / Tilde",
+    "url": "https://labex.io/linuxjourney",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Interactive Linux Guides"
+  },
+  {
+    "name": "HowToLinux",
+    "url": "https://howtolinux.vercel.app",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Linux Desktop Guides"
+  },
+  {
+    "name": "⁠tony, btw",
+    "url": "https://tonybtw.com/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Linux Tutorials / Guides / Discord"
+  },
+  {
+    "name": "Linuxtopia",
+    "url": "https://www.linuxtopia.org/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Linux Guides"
+  },
+  {
+    "name": "Linux Roadmap",
+    "url": "https://roadmap.sh/linux",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Linux Learning Roadmap"
+  },
+  {
+    "name": "Erik Dubois",
+    "url": "https://www.youtube.com/c/ErikDubois",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Arch-centric Linux Video Tutorials"
+  },
+  {
+    "name": "Gentoo Wiki",
+    "url": "https://wiki.gentoo.org/wiki/Main_Page",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Gentoo Wikis / Guides"
+  },
+  {
+    "name": "Debian Wiki",
+    "url": "https://wiki.debian.org/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Debian Wiki / Guides"
+  },
+  {
+    "name": "⁠Fedora Noble Guide",
+    "url": "https://github.com/wz790/Fedora-Noble-Setup",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Fedora Setup Guide"
+  },
+  {
+    "name": "Zero to Nix",
+    "url": "https://zero-to-nix.com/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Nix Learning Guide"
+  },
+  {
+    "name": "Vim Tutorials",
+    "url": "https://www.youtube.com/playlist?list=PL3cu45aM3C2DJVGfCjSBB1yD9YkC7q27-",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Vim Tutorial Playlist by Mental Outlaw"
+  },
+  {
+    "name": "⁠Wikiman",
+    "url": "https://github.com/filiparag/wikiman",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Offline Linux Documentation Search"
+  },
+  {
+    "name": "Linux Command Library",
+    "url": "https://linuxcommandlibrary.com/",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "⭐ Top Pick",
+    "description": "Searchable Linux Command Index / GitHub"
+  },
+  {
+    "name": "Awesome for One Liner",
+    "url": "https://github.com/sheepla/awesome-for-oneliner",
+    "category": "Linux / macOS",
+    "section": "Wiki",
+    "pricing": "Free / Open Source",
+    "description": "Curated One-Liner CLI Tools"
+  },
+  {
+    "name": "Awesome Windows 11",
+    "url": "https://github.com/awesome-windows11/windows11",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Windows 11 Resources"
+  },
+  {
+    "name": "PC-Optimization-Hub",
+    "url": "https://github.com/BoringBoredom/PC-Optimization-Hub",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "System Optimization Resources"
+  },
+  {
+    "name": "PowerToys",
+    "url": "https://learn.microsoft.com/en-us/windows/powertoys/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "System Tools / Search / Plugins / GitHub"
+  },
+  {
+    "name": "Sysinternals",
+    "url": "https://learn.microsoft.com/en-us/sysinternals/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Advanced System Tools"
+  },
+  {
+    "name": "SuperF4 / FKill",
+    "url": "https://stefansundin.github.io/superf4/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Process Killers"
+  },
+  {
+    "name": "CPU-Z / CPU Fetch / Glow / GPU-Z",
+    "url": "https://www.cpuid.com/softwares/cpu-z.html",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "System Info Tools"
+  },
+  {
+    "name": "Bulk Crap Uninstaller / Revo Uninstaller / GeekUninstaller",
+    "url": "https://www.bcuninstaller.com/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Bulk Uninstallation Tools"
+  },
+  {
+    "name": "NanaRun",
+    "url": "https://github.com/M2Team/NanaRun",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "System Admin Tools"
+  },
+  {
+    "name": "BleachBit",
+    "url": "https://www.bleachbit.org/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Clean System Storage / GitHub"
+  },
+  {
+    "name": "PolicyPlus",
+    "url": "https://github.com/Fleex255/PolicyPlus",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Local Group Policy Editor"
+  },
+  {
+    "name": "GhostBuster / Device Cleanup Tool",
+    "url": "https://bitbucket.org/wvd-vegt/ghostbuster/src/master/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Remove Non-Present Devices"
+  },
+  {
+    "name": "CoreTemp",
+    "url": "https://www.alcpu.com/CoreTemp/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Process Monitor"
+  },
+  {
+    "name": "Why Is This Running?",
+    "url": "https://github.com/pranshuparmar/witr",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Process Tracing / Debugging"
+  },
+  {
+    "name": "nyrna",
+    "url": "https://nyrna.merritt.codes",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Suspend Apps / Games / GitHub"
+  },
+  {
+    "name": "ThrottleStop",
+    "url": "https://www.techpowerup.com/download/techpowerup-throttlestop/",
+    "category": "System Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Laptop CPU Monitor / Optimizer"
+  },
+  {
+    "name": "Krokiet / czkawka / dupeGuru",
+    "url": "https://github.com/qarmin/czkawka/blob/master/krokiet/README.md",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Duplicate File Finders"
+  },
+  {
+    "name": "UnLock IT / Lock Hunter",
+    "url": "https://emcosoftware.com/unlock-it/download",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "File Unlocker / Deleter"
+  },
+  {
+    "name": "Icaros",
+    "url": "https://github.com/Xanashi/Icaros",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Add Explorer Thumbnails to any Video Format"
+  },
+  {
+    "name": "HTTPDirfs / hfs",
+    "url": "https://github.com/fangfufu/httpdirfs",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "HTTP File Systems"
+  },
+  {
+    "name": "WinBtrfs",
+    "url": "https://github.com/maharmstone/btrfs",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Btrfs File System"
+  },
+  {
+    "name": "mergerfs",
+    "url": "https://github.com/trapexit/mergerfs",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Union File System"
+  },
+  {
+    "name": "ExampleFile / ⁠Dummyfiles / File-Examples",
+    "url": "https://www.examplefile.com/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Dummy Example Files"
+  },
+  {
+    "name": "AB Download Manager",
+    "url": "https://abdownloadmanager.com/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Download Manager / Windows, macOS, Linux, Android / Firefox / Chrome / Telegram / GitHub"
+  },
+  {
+    "name": "JDownloader",
+    "url": "https://jdownloader.org/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Download Manager / Windows, macOS, Linux"
+  },
+  {
+    "name": "IDM",
+    "url": "https://rentry.co/FMHYB64#idm",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Download Manager / Firefox / Chrome / Windows"
+  },
+  {
+    "name": "Go Speed",
+    "url": "https://gopeed.com/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Download Manager / All Platforms / Extension / Plugins / GitHub"
+  },
+  {
+    "name": "Rayburst",
+    "url": "https://rayburst.pages.dev",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Download Manager / GitHub"
+  },
+  {
+    "name": "FDM",
+    "url": "https://www.freedownloadmanager.org/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Download Manager / YTDL Addon / Firefox / Chrome / Windows, macOS, Linux, Android"
+  },
+  {
+    "name": "Brisk",
+    "url": "https://github.com/BrisklyDev/brisk/",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Plexo",
+    "url": "https://anmolkapil.github.io/plexo",
+    "category": "File Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Multi-Connection / Windows, macOS, Linux / GitHub"
+  },
+  {
+    "name": "Pake",
+    "url": "https://github.com/tw93/Pake",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Turn Webpages into Desktop Apps"
+  },
+  {
+    "name": "deploy-your-own-saas",
+    "url": "https://github.com/Atarity/deploy-your-own-saas",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Self-Hosted Cloud Services"
+  },
+  {
+    "name": "Namechk / User Scanner / IUS",
+    "url": "https://namechk.com/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Check Username Availability"
+  },
+  {
+    "name": "fast / CLI / Cloudflare Speed Test / CLI / OpenSpeedTest / LibreSpeed",
+    "url": "https://fast.com/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Speed Tests"
+  },
+  {
+    "name": "Safing Portmaster",
+    "url": "https://safing.io/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Network Monitor / DNS Resolver / Firewall / Discord / GitHub"
+  },
+  {
+    "name": "WiFi Analyzer",
+    "url": "https://apps.microsoft.com/store/detail/wifi-analyzer/9NBLGGH33N0N",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "WiFi Analyzer"
+  },
+  {
+    "name": "GlobalPing",
+    "url": "https://globalping.io/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Global Network Testing"
+  },
+  {
+    "name": "Pingify API / PingTracer",
+    "url": "https://pingify-api.vercel.app/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Network Latency / Ping Testing"
+  },
+  {
+    "name": "Pinging / NetBlocks / OpenNetMeter",
+    "url": "https://www.pinging.net/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Internet Performance / Connection Checks"
+  },
+  {
+    "name": "Wireshark",
+    "url": "https://www.wireshark.org/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Network Protocol Analyzer / Profiles"
+  },
+  {
+    "name": "Trippy",
+    "url": "https://trippy.cli.rs/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Network Diagnostic Tool"
+  },
+  {
+    "name": "MxToolbox",
+    "url": "https://mxtoolbox.com/NetworkTools.aspx",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Network Tools"
+  },
+  {
+    "name": "NETworkManager",
+    "url": "https://borntoberoot.net/NETworkManager/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Network Manager"
+  },
+  {
+    "name": "mRemoteNG",
+    "url": "https://mremoteng.org/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Remote Connections Manager"
+  },
+  {
+    "name": "MyPublicWiFi",
+    "url": "https://www.mypublicwifi.com/",
+    "category": "Internet Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Turn PC into Wi-Fi Hotspot"
+  },
+  {
+    "name": "Disroot / Hoffnung für die Zukunft / ⁠Radical Servers / canine.tools / 4d2 / bloat.cat / ⁠NerdVPN / ⁠Privacy Redirect / ⁠Nadeko / ⁠Meowing / adminForge",
+    "url": "https://disroot.org/en/#services",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "GrayJay",
+    "url": "https://grayjay.app/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "YouTube, Twitch, Rumble, etc. / Guide / Plugins / Add Platforms, 2, 3 / GitLab"
+  },
+  {
+    "name": "SocialBlade",
+    "url": "https://socialblade.com/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Social Media Stats"
+  },
+  {
+    "name": "LiveCounts",
+    "url": "https://livecounts.io/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Live Social Media Stats"
+  },
+  {
+    "name": "LibRedirect / Predirect / Proxy Redirect",
+    "url": "https://github.com/libredirect/browser_extension",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Frontend Redirect Extensions"
+  },
+  {
+    "name": "Numblr",
+    "url": "https://github.com/heyLu/numblr",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Self-Hosted Frontend Redirect"
+  },
+  {
+    "name": "Pinless / .onion / ⁠PinLite / Binternet",
+    "url": "https://pinterest.bunk.im/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Pinterest Frontends / Viewers"
+  },
+  {
+    "name": "⁠Pinterest Power Menu",
+    "url": "https://github.com/Angel2mp3/Pinterest-Power-Menu",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Pinterest Improvement Script"
+  },
+  {
+    "name": "⁠StoryLooker",
+    "url": "https://storylooker.com/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Snapchat Frontends / Viewers"
+  },
+  {
+    "name": "⁠grapper",
+    "url": "https://grapper.gab.net.eu.org/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Vine Video Archive / Username Required"
+  },
+  {
+    "name": "Social-Searcher / WeVerify",
+    "url": "https://www.social-searcher.com/",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Social Media Search Engines"
+  },
+  {
+    "name": "Social Media Hacker List",
+    "url": "https://github.com/MobileFirstLLC/social-media-hacker-list",
+    "category": "Social Media Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Social Media Apps / Tools"
+  },
+  {
+    "name": "TextFixer / SortMyList / OnlineTextTools / Convert Case / The Alphabetizer",
+    "url": "https://www.textfixer.com/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Organize / Format Text"
+  },
+  {
+    "name": "Paperless-ngx / Doc Analyzer / OpenPaper / papis / ⁠Docspell / ⁠Papra / DataShare",
+    "url": "https://docs.paperless-ngx.com",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Document Managers"
+  },
+  {
+    "name": "Diffr / TextCompare / OnlineTextCompare / CompareText",
+    "url": "https://loilo.github.io/diffr/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Compare Text"
+  },
+  {
+    "name": "Count Duplicates / DuplicateWord",
+    "url": "https://www.somacon.com/p568.php",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Count / Remove Duplicates in a List"
+  },
+  {
+    "name": "⁠Unredact",
+    "url": "https://github.com/leedrake5/unredact",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "PDF Redaction Text Recovery"
+  },
+  {
+    "name": "Textify / WindowTextExtractor",
+    "url": "https://ramensoftware.com/textify",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Copy Text from Any Dialog"
+  },
+  {
+    "name": "Scanner / NAPS2",
+    "url": "https://simon-knuth.github.io/scanner/index",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Scanner Apps"
+  },
+  {
+    "name": "DocuSeal",
+    "url": "https://www.docuseal.com/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Free Document Signing / GitHub"
+  },
+  {
+    "name": "Asciify",
+    "url": "https://asciify.dev/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "ASCII Character Reference Chart"
+  },
+  {
+    "name": "⁠Awesome Pastebins",
+    "url": "https://github.com/lorien/awesome-pastebins",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Pastebin Index"
+  },
+  {
+    "name": "PrivateBin / Paste.to / NoteBin / TxtBin / ⁠ZeroBin",
+    "url": "https://privatebin.net/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Markdown Support / Syntax Highlighting / Instances / GitHub"
+  },
+  {
+    "name": "GitHub Gists / GitLab Snippets",
+    "url": "https://gist.github.com/",
+    "category": "Text Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Multi-Syntax / Requires Sign-Up"
+  },
+  {
+    "name": "Library of Codexes",
+    "url": "https://libraryofcodexes.com/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Game Codex Library"
+  },
+  {
+    "name": "r/CrackWatch / r/RepackWorld / ⁠IsItCracked / GameStatus / GitGud",
+    "url": "https://www.reddit.com/r/CrackWatch/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Scene Release Trackers"
+  },
+  {
+    "name": "HowLongToBeat",
+    "url": "https://howlongtobeat.com/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Find Average Game Lengths / Discord"
+  },
+  {
+    "name": "r/tipofmyjoystick",
+    "url": "https://www.reddit.com/r/tipofmyjoystick/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Find Games via Screenshot or Description"
+  },
+  {
+    "name": "Sunshine / Apollo",
+    "url": "https://app.lizardbyte.dev/Sunshine/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Remote Server for Moonlight / Mobile / Discord / GitHub"
+  },
+  {
+    "name": "Moonlight",
+    "url": "https://moonlight-stream.org/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Gaming Remote Desktop Client / Discord / GitHub"
+  },
+  {
+    "name": "⁠Greenlight",
+    "url": "https://github.com/unknownskl/greenlight",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Improved xCloud Client / Xbox Cloud Gaming"
+  },
+  {
+    "name": "⁠Better xCloud",
+    "url": "https://better-xcloud.github.io/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Add Features to xCloud / X / Telegram / GitHub"
+  },
+  {
+    "name": "Ghost Hunter Pro",
+    "url": "https://github.com/MarchTheDev/GhostHunterPro",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Removes Leftover Game Files"
+  },
+  {
+    "name": "⁠Arcade Database",
+    "url": "https://zenius-i-vanisher.com/v5.2/arcades.php",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Arcade Game Map + Database"
+  },
+  {
+    "name": "⁠Lets Play Index",
+    "url": "https://www.letsplayindex.com/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Index of Lets Plays / Longplays"
+  },
+  {
+    "name": "⁠TASVideos",
+    "url": "https://tasvideos.org/",
+    "category": "Gaming Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "TAS Video Community / Resources / Emulator Resources / Game Resources"
+  },
+  {
+    "name": "GIMP / Photoshop UI / Texture Synthesizer / GitLab",
+    "url": "https://www.gimp.org/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "ImageMagick / Scripts",
+    "url": "https://imagemagick.org/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "⁠Affinity / Linux / No Login Method",
+    "url": "https://www.affinity.studio/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "⁠PaintFE",
+    "url": "https://paintfe.com/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "LazPaint",
+    "url": "https://lazpaint.github.io/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "⁠Schist",
+    "url": "https://schist.app/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "PhotoDemon",
+    "url": "https://photodemon.org/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "⁠RapidRAW",
+    "url": "https://www.getrapidraw.com/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Paint.net",
+    "url": "https://paint.net/index.html",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Hugin",
+    "url": "https://hugin.sourceforge.io/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Panorama Image Generator / Windows, macOS, Linux"
+  },
+  {
+    "name": "Scribus / Quarkdown",
+    "url": "https://www.scribus.net/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Page Layout & Typesetting Programs / Windows, macOS, Linux"
+  },
+  {
+    "name": "Darkroom",
+    "url": "https://apps.apple.com/us/app/darkroom-photo-video-editor/id953286746",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "SeaShore",
+    "url": "https://sourceforge.net/projects/seashore/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Compositor",
+    "url": "https://robbietilton.com/compositor",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Curated community resource and utility."
+  },
+  {
+    "name": "Pixlr",
+    "url": "https://pixlr.com/",
+    "category": "Image Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Simple Editor / Hide Premium / Unlimited Saves"
+  },
+  {
+    "name": "Digital Video Intro",
+    "url": "https://github.com/leandromoreira/digital_video_introduction",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Digital Video Guides / Resources"
+  },
+  {
+    "name": "Reincubate Camo",
+    "url": "https://camo.com/studio",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Use Any Camera as Webcam"
+  },
+  {
+    "name": "⁠Broadcast Box / Screen Share Party / Screego / Screen-Sharing",
+    "url": "https://b.siobud.com/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Web-Based Screen Sharing"
+  },
+  {
+    "name": "⁠uxplay-windows",
+    "url": "https://github.com/leapbtw/uxplay-windows",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "AirPlay Receiver / Windows"
+  },
+  {
+    "name": "Deep-Live-Cam",
+    "url": "https://github.com/hacksider/Deep-Live-Cam",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Video Face Swap / Windows, macOS, Linux"
+  },
+  {
+    "name": "Rope",
+    "url": "https://github.com/Hillobar/Rope",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Video Face Swap Tools / Windows / Discord"
+  },
+  {
+    "name": "VideoHelp Forum",
+    "url": "https://forum.videohelp.com/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "All Things Media Discussion / Web"
+  },
+  {
+    "name": "ICAT / Video Compare",
+    "url": "https://www.nvidia.com/en-us/geforce/technologies/icat/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Video Quality Comparison & Analysis Tools / Windows"
+  },
+  {
+    "name": "videoduplicatefinder",
+    "url": "https://github.com/0x90d/videoduplicatefinder",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Duplicate Video Finder / Windows, macOS, Linux, Docker"
+  },
+  {
+    "name": "MkvDefaultTrackChanger",
+    "url": "https://mkvdefaulttrackchanger.pages.dev/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Change Default MKV Subtitle / Audio Tracks / Windows, macOS, Linux / GitHub"
+  },
+  {
+    "name": "untrunc / ⁠MP4Recover",
+    "url": "https://github.com/anthwlock/untrunc",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Recover Broken MP4 Files / Docker"
+  },
+  {
+    "name": "ImgBurn",
+    "url": "https://www.majorgeeks.com/files/details/imgburn.html",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "CD / DVD Burning / Windows"
+  },
+  {
+    "name": "DVDStyler",
+    "url": "https://sourceforge.net/projects/dvdstyler/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "CD / DVD Burning / Windows, macOS, Linux"
+  },
+  {
+    "name": "VidCoder / XReveal / Pro",
+    "url": "https://vidcoder.net/",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "DVD / Blu-ray Ripping / Windows"
+  },
+  {
+    "name": "MakeMKV",
+    "url": "https://forum.makemkv.com/forum/viewtopic.php?f=5&t=1053",
+    "category": "Video Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Create MKV from Blu-ray / DVD / Windows, macOS"
+  },
+  {
+    "name": "StackOverflow",
+    "url": "https://stackoverflow.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Developer Forum"
+  },
+  {
+    "name": "XDA",
+    "url": "https://xdaforums.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "App Development Forum / Discord"
+  },
+  {
+    "name": "Spiceworks Community",
+    "url": "https://community.spiceworks.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Developer Forum"
+  },
+  {
+    "name": "DEV Community",
+    "url": "https://dev.to/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Developer Forum"
+  },
+  {
+    "name": "Blind",
+    "url": "https://www.teamblind.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Developer Forum"
+  },
+  {
+    "name": "IndieHackers",
+    "url": "https://www.indiehackers.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Developer Forum"
+  },
+  {
+    "name": "CyberArsenal",
+    "url": "https://cyberarsenal.org/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Cybersecurity Forums"
+  },
+  {
+    "name": "⁠late.sh",
+    "url": "https://late.sh/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Command-Line Style Clubhouse / GitHub"
+  },
+  {
+    "name": "⁠Graphics Programming",
+    "url": "https://discord.gg/graphicsprogramming",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Graphics Programming Discord Server / Subreddit"
+  },
+  {
+    "name": "⁠Functional Programming",
+    "url": "https://discord.gg/K6XHBSh",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Functional Programming Community / Discord"
+  },
+  {
+    "name": "Tech-Blogs / HN Popularity",
+    "url": "https://tech-blogs.dev/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Blogs for Developers"
+  },
+  {
+    "name": "The Devs Network",
+    "url": "https://thedevs.network/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Developer Chat"
+  },
+  {
+    "name": "KrebsOnSecurity",
+    "url": "https://krebsonsecurity.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Cybersecurity News"
+  },
+  {
+    "name": "Lobsters",
+    "url": "https://lobste.rs/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "⭐ Top Pick",
+    "description": "Dev News / Highlighter"
+  },
+  {
+    "name": "DevURLs",
+    "url": "https://devurls.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Dev News"
+  },
+  {
+    "name": "daily.dev",
+    "url": "https://daily.dev/posts",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Dev News"
+  },
+  {
+    "name": "⁠Frontend Dogma",
+    "url": "https://frontenddogma.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Web Dev News Aggregator"
+  },
+  {
+    "name": "CyberInsider",
+    "url": "https://cyberinsider.com/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Cybersecurity News"
+  },
+  {
+    "name": "This Week in Rust",
+    "url": "https://this-week-in-rust.org/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Rust News / Updates"
+  },
+  {
+    "name": "hackertab.dev",
+    "url": "https://hackertab.dev/",
+    "category": "Developer Tools",
+    "section": "Tools",
+    "pricing": "Free / Open Source",
+    "description": "Dev Browser Startpages / GitHub"
+  }
+]
