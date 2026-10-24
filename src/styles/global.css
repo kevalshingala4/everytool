@@ -132,6 +132,11 @@ h1, h2, h3, .font-heading {
   box-shadow: 0px 0px 0px var(--shadow-neo);
 }
 
+/* Ensure hidden elements are strictly hidden without CSS override conflicts */
+.hidden {
+  display: none !important;
+}
+
 /* Neo brutal pill badges */
 .neo-pill {
   border: 2px solid var(--border-neo);
