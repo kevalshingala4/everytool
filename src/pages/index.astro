@@ -20,7 +20,9 @@
 import tools from "../data/tools.json";
 import "../styles/global.css";
 
-// 1. EXTRACT CATEGORIES AND STATS
+// 1. EXTRACT CATEGORIES AND STATS (DUAL WIKI + TOOLS GROUPING)
+const wikiCategories = [...new Set(tools.filter((t) => t.section === "Wiki").map((t) => t.category))];
+const toolCategories = [...new Set(tools.filter((t) => t.section === "Tools").map((t) => t.category))];
 const categories = [...new Set(tools.map((t) => t.category))];
 const topPicks = tools.filter((t) => t.pricing?.includes("⭐") || t.pricing?.toLowerCase().includes("top"));
 const openSourceTools = tools.filter((t) => t.pricing?.toLowerCase().includes("open source") || t.pricing?.toLowerCase().includes("free"));
@@ -30,9 +32,36 @@ function toSlug(cat: string) {
 	return cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-// 3. CATEGORY ICON & QUIRKY SUBTITLE MAPPING
+// 3. COMPLETE CATEGORY ICONS MAPPING
+const categoryIcons: Record<string, string> = {
+	// Wiki Sections
+	"Adblocking / Privacy": "⛔",
+	"Artificial Intelligence": "🤖",
+	"Movies / TV / Anime": "📺",
+	"Music / Podcasts / Radio": "🎵",
+	"Gaming / Emulation": "🎮",
+	"Books / Comics / Manga": "📗",
+	"Downloading": "💾",
+	"Torrenting": "🌀",
+	"Educational": "🧠",
+	"Android / iOS": "📱",
+	"Linux / macOS": "🐧",
+
+	// Tools Sections
+	"System Tools": "⚙️",
+	"File Tools": "📁",
+	"Internet Tools": "🌐",
+	"Social Media Tools": "💬",
+	"Text Tools": "📝",
+	"Gaming Tools": "🕹️",
+	"Image Tools": "🎨",
+	"Video Tools": "🎬",
+	"Developer Tools": "💻",
+};
+
+// 4. CATEGORY SUBTITLES FOR BENTO CARDS
 const categoryMeta: Record<string, { icon: string; subtitle: string }> = {
-	"Adblocking / Privacy": { icon: "🛡️", subtitle: "Reclaim your screen and keep your privacy safe" },
+	"Adblocking / Privacy": { icon: "⛔", subtitle: "Reclaim your screen and keep your privacy safe" },
 	"Artificial Intelligence": { icon: "🤖", subtitle: "Curated AI brains, assistants, and creative tools" },
 	"Movies / TV / Anime": { icon: "📺", subtitle: "Binge-worthy streaming and media archives" },
 	"Music / Podcasts / Radio": { icon: "🎵", subtitle: "Soundscapes, free tunes, and radio waves" },
@@ -109,29 +138,70 @@ function getDomain(urlStr: string) {
 		<header class="sticky top-0 z-40 bg-[var(--bg-canvas)]/95 backdrop-blur-md border-b-[2.5px] border-[var(--border-neo)] px-4 sm:px-8 py-3.5 transition-colors">
 			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 				
-				<!-- Logo with cute animated mascot -->
-				<div class="flex items-center gap-3">
-					<a href="/" class="flex items-center gap-2 group">
-						<!-- Expressive playful cartoon face logo -->
-						<div class="w-10 h-10 rounded-xl bg-[#38bdf8] border-[2.5px] border-[var(--border-neo)] shadow-[3px_3px_0px_var(--shadow-neo)] flex items-center justify-center text-xl group-hover:rotate-6 transition-transform">
-							😲
-						</div>
-						<div class="flex flex-col">
-							<span class="font-heading font-extrabold text-2xl tracking-tight leading-none text-[var(--text-main)]">
-								everytool<span class="text-[#ffc700] text-3xl leading-none">.</span>
-							</span>
-							<span class="text-[10px] font-bold text-[var(--text-muted)] tracking-wider uppercase mt-0.5">
-								The Curated Web
-							</span>
-						</div>
-					</a>
+				<!-- Row 1: Left (EveryTool Logo) | Right (Theme, Toolkit & 🍔 Hamburger Menu) -->
+				<div class="w-full md:w-auto flex items-center justify-between gap-3">
+					<div class="flex items-center gap-3">
+						<!-- Logo with cute animated mascot -->
+						<a href="/" class="flex items-center gap-2 group">
+							<!-- Expressive playful cartoon face logo -->
+							<div class="w-10 h-10 rounded-xl bg-[#38bdf8] border-[2.5px] border-[var(--border-neo)] shadow-[3px_3px_0px_var(--shadow-neo)] flex items-center justify-center text-xl group-hover:rotate-6 transition-transform">
+								😲
+							</div>
+							<div class="flex flex-col">
+								<span class="font-heading font-extrabold text-2xl tracking-tight leading-none text-[var(--text-main)]">
+									everytool<span class="text-[#ffc700] text-3xl leading-none">.</span>
+								</span>
+								<span class="text-[10px] font-bold text-[var(--text-muted)] tracking-wider uppercase mt-0.5">
+									The Curated Web
+								</span>
+							</div>
+						</a>
 
-					<!-- Quick navigation pills -->
-					<nav class="hidden lg:flex items-center gap-1.5 ml-4 pl-4 border-l-2 border-[var(--border-neo)]/30 text-xs font-bold">
-						<a href="#categories-section" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Categories</a>
-						<a href="#top-picks" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Top Picks</a>
-						<a href="/beginners-guide" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Beginners Guide</a>
-					</nav>
+						<!-- Quick navigation pills (Desktop only) -->
+						<nav class="hidden lg:flex items-center gap-1.5 ml-4 pl-4 border-l-2 border-[var(--border-neo)]/30 text-xs font-bold">
+							<a href="#categories-section" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Categories</a>
+							<a href="#top-picks" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Top Picks</a>
+							<a href="/beginners-guide" class="px-3 py-1.5 rounded-lg hover:bg-[var(--bg-card)] border border-transparent hover:border-[var(--border-neo)] transition">Beginners Guide</a>
+						</nav>
+					</div>
+
+					<!-- Mobile Right Controls: Theme, Pocket Toolkit & 🍔 Hamburger Menu (Right Side) -->
+					<div class="flex lg:hidden items-center gap-2">
+						<!-- Theme Switcher Button (Mobile) -->
+						<button 
+							id="mobileThemeToggleBtn" 
+							type="button" 
+							class="neo-btn bg-[var(--bg-card)] p-2 text-sm flex-shrink-0"
+							title="Toggle Light / Dark Mode"
+						>
+							<span class="themeIconMobile">☀️</span>
+						</button>
+
+						<!-- Pocket Toolkit Shortcut (Mobile) -->
+						<a 
+							href="#my-toolkit" 
+							class="neo-btn bg-[#fda4af] hover:bg-[#fb7185] text-black px-2.5 py-1.5 text-xs font-bold flex items-center gap-1"
+							title="View Saved Favorites"
+						>
+							<span>💖</span>
+							<span class="mobileHeaderSavedCount">0</span>
+						</a>
+
+						<!-- 🍔 Mobile Hamburger Menu Button (Positioned on the Right Side) -->
+						<button 
+							id="mobileMenuOpenBtn" 
+							type="button" 
+							class="neo-btn bg-[#ffc700] hover:bg-[#fde047] text-black p-2 flex items-center justify-center cursor-pointer shadow-[2px_2px_0px_var(--shadow-neo)]"
+							aria-label="Open directory navigation menu"
+							title="Open directory menu"
+						>
+							<svg class="w-5 h-5 fill-none stroke-current stroke-[2.5]" viewBox="0 0 24 24">
+								<line x1="3" y1="6" x2="21" y2="6"></line>
+								<line x1="3" y1="12" x2="21" y2="12"></line>
+								<line x1="3" y1="18" x2="21" y2="18"></line>
+							</svg>
+						</button>
+					</div>
 				</div>
 
 				<!-- Neo-Brutalist Search Capsule (With Dice Roll Trigger) -->
@@ -170,25 +240,40 @@ function getDomain(urlStr: string) {
 						</button>
 					</div>
 
-					<!-- Theme Switcher Button (☀️ Paper / 🌙 Dark) -->
+					<!-- Desktop Theme Switcher Button (☀️ Paper / 🌙 Dark) -->
 					<button 
 						id="themeToggleBtn" 
 						type="button" 
-						class="neo-btn bg-[var(--bg-card)] p-2.5 text-base flex-shrink-0"
+						class="neo-btn bg-[var(--bg-card)] p-2.5 text-base flex-shrink-0 hidden lg:inline-flex"
 						title="Toggle Light / Dark Mode"
 					>
 						<span id="themeIcon">☀️</span>
 					</button>
 
-					<!-- Pocket Toolkit Shortcut -->
+					<!-- Desktop Pocket Toolkit Shortcut -->
 					<a 
 						href="#my-toolkit" 
-						class="neo-btn bg-[#fda4af] hover:bg-[#fb7185] text-black px-3 py-2 text-xs font-bold flex-shrink-0 hidden sm:flex items-center gap-1.5"
+						class="neo-btn bg-[#fda4af] hover:bg-[#fb7185] text-black px-3 py-2 text-xs font-bold flex-shrink-0 hidden lg:flex items-center gap-1.5"
 						title="View Saved Favorites"
 					>
 						<span>💖</span>
 						<span id="headerSavedCount">0</span>
 					</a>
+
+					<!-- Desktop / Tablet Hamburger Menu Button (Visible on medium screens) -->
+					<button 
+						id="desktopMenuOpenBtn" 
+						type="button" 
+						class="neo-btn bg-[#ffc700] hover:bg-[#fde047] text-black p-2.5 text-sm hidden lg:inline-flex items-center gap-1.5 cursor-pointer"
+						title="Open directory menu"
+					>
+						<svg class="w-4 h-4 fill-none stroke-current stroke-[2.5]" viewBox="0 0 24 24">
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+						<span class="text-xs font-bold">Menu</span>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -651,7 +736,152 @@ function getDomain(urlStr: string) {
 		</div>
 
 		<!-- ===================================================================== -->
-		<!-- 9. TOAST NOTIFICATION CONTAINER                                       -->
+		<!-- 9. MOBILE SIDEBAR MENU (RIGHT-SIDE SLIDE-OUT DRAWER)                  -->
+		<!-- ===================================================================== -->
+		<!-- Backdrop Dimmer Overlay -->
+		<div 
+			id="mobileMenuOverlay" 
+			class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"
+			aria-hidden="true"
+		></div>
+
+		<!-- Right-Side Slide-Out Drawer -->
+		<aside 
+			id="mobileDrawer" 
+			class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-card)] border-l-[3px] border-[var(--border-neo)] shadow-[-8px_0px_0px_var(--shadow-neo)] z-50 flex flex-col justify-between overflow-y-auto custom-scroll transform translate-x-full transition-transform duration-300 ease-in-out"
+			aria-label="Mobile Navigation Menu"
+		>
+			<div>
+				<!-- Drawer Header: Brand & Close Button -->
+				<div class="p-4 border-b-2 border-[var(--border-neo)] bg-[var(--bg-canvas)] flex items-center justify-between sticky top-0 z-10">
+					<a href="/" class="mobile-nav-link flex items-center gap-2">
+						<div class="w-8 h-8 rounded-lg bg-[#38bdf8] border-2 border-[var(--border-neo)] shadow-[2px_2px_0px_var(--shadow-neo)] flex items-center justify-center text-base">
+							😲
+						</div>
+						<span class="font-heading font-extrabold text-lg text-[var(--text-main)]">
+							EveryTool<span class="text-[#ffc700]">.</span>
+						</span>
+					</a>
+					<button 
+						id="mobileMenuCloseBtn" 
+						type="button" 
+						class="neo-btn bg-[var(--bg-card)] p-1.5 text-sm hover:bg-[#fda4af] transition cursor-pointer"
+						aria-label="Close menu"
+					>
+						✕
+					</button>
+				</div>
+
+				<!-- SECTION A: PRIMARY QUICK LINKS -->
+				<div class="p-3 border-b-2 border-[var(--border-neo)]/20 space-y-1 text-xs font-bold">
+					<a 
+						href="/" 
+						class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] transition"
+					>
+						<span class="text-sm">🏠</span>
+						<span>EveryTool</span>
+					</a>
+					<a 
+						href="/beginners-guide" 
+						class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] transition"
+					>
+						<span class="text-sm">📚</span>
+						<span>Beginners Guide</span>
+					</a>
+					<a 
+						href="#movies-tv-anime" 
+						class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] transition"
+					>
+						<span class="text-sm">📰</span>
+						<span>Posts</span>
+					</a>
+					<a 
+						href="https://github.com" 
+						target="_blank" 
+						rel="noopener noreferrer" 
+						class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] transition"
+					>
+						<span class="text-sm">💡</span>
+						<span>Contribute</span>
+						<span class="text-[10px] opacity-60 ml-auto">↗</span>
+					</a>
+				</div>
+
+				<!-- SECTION B: WIKI CATEGORIES -->
+				<div class="p-3 border-b-2 border-[var(--border-neo)]/20">
+					<div class="flex items-center justify-between px-2 mb-2">
+						<span class="font-heading font-extrabold text-xs uppercase tracking-wider text-[var(--text-muted)]">
+							Wiki
+						</span>
+						<span class="neo-pill bg-[#fed7aa] text-black text-[10px] py-0.5 px-1.5">
+							{wikiCategories.length}
+						</span>
+					</div>
+					<ul class="space-y-0.5 text-xs font-bold">
+						{wikiCategories.map((cat) => (
+							<li>
+								<a 
+									href={`#${toSlug(cat)}`} 
+									class="mobile-nav-link flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] hover:text-amber-500 transition"
+								>
+									<span class="flex items-center gap-2 truncate">
+										<span class="text-sm flex-shrink-0">{categoryIcons[cat] || "📁"}</span>
+										<span class="truncate">{cat}</span>
+									</span>
+									<span class="text-[10px] text-[var(--text-faint)] font-mono">
+										{tools.filter((t) => t.category === cat).length}
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+
+				<!-- SECTION C: TOOLS CATEGORIES -->
+				<div class="p-3">
+					<div class="flex items-center justify-between px-2 mb-2">
+						<span class="font-heading font-extrabold text-xs uppercase tracking-wider text-[var(--text-muted)]">
+							Tools
+						</span>
+						<span class="neo-pill bg-[#bbf7d0] text-black text-[10px] py-0.5 px-1.5">
+							{toolCategories.length}
+						</span>
+					</div>
+					<ul class="space-y-0.5 text-xs font-bold">
+						{toolCategories.map((cat) => (
+							<li>
+								<a 
+									href={`#${toSlug(cat)}`} 
+									class="mobile-nav-link flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-[var(--bg-card-alt)] text-[var(--text-main)] hover:text-emerald-500 transition"
+								>
+									<span class="flex items-center gap-2 truncate">
+										<span class="text-sm flex-shrink-0">{categoryIcons[cat] || "🧰"}</span>
+										<span class="truncate">{cat}</span>
+									</span>
+									<span class="text-[10px] text-[var(--text-faint)] font-mono">
+										{tools.filter((t) => t.category === cat).length}
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+
+			<!-- Drawer Footer: Total Tool Count -->
+			<div class="p-4 border-t-2 border-[var(--border-neo)] bg-[var(--bg-canvas)] sticky bottom-0 z-10 flex items-center justify-between text-xs font-bold">
+				<span class="flex items-center gap-1.5 text-amber-500">
+					<span>⚡</span>
+					<span>{tools.length} Curated Tools</span>
+				</span>
+				<a href="#top-picks" class="mobile-nav-link text-[10px] underline text-[var(--text-muted)] hover:text-[var(--text-main)]">
+					Top Picks
+				</a>
+			</div>
+		</aside>
+
+		<!-- ===================================================================== -->
+		<!-- 10. TOAST NOTIFICATION CONTAINER                                      -->
 		<!-- ===================================================================== -->
 		<div id="toastBox" class="fixed bottom-6 right-6 z-50 pointer-events-none flex flex-col gap-2"></div>
 
@@ -663,19 +893,27 @@ function getDomain(urlStr: string) {
 			// A. THEME TOGGLE (Paper Mode vs Chalkboard Dark Mode)
 			// -------------------------------------------------------------
 			const themeToggleBtn = document.getElementById("themeToggleBtn");
+			const mobileThemeToggleBtn = document.getElementById("mobileThemeToggleBtn");
 			const themeIcon = document.getElementById("themeIcon");
+			const mobileThemeIcons = document.querySelectorAll(".themeIconMobile");
 
 			function syncThemeUI() {
 				const isDark = document.documentElement.classList.contains("theme-dark");
 				if (themeIcon) themeIcon.textContent = isDark ? "🌙" : "☀️";
+				mobileThemeIcons.forEach((icon) => {
+					icon.textContent = isDark ? "🌙" : "☀️";
+				});
 			}
 
-			themeToggleBtn?.addEventListener("click", () => {
+			function toggleTheme() {
 				const isDark = document.documentElement.classList.toggle("theme-dark");
 				localStorage.setItem("everytool-theme", isDark ? "dark" : "light");
 				syncThemeUI();
 				showToast(isDark ? "Switched to Chalkboard Dark Mode 🌙" : "Switched to Paper Light Mode ☀️");
-			});
+			}
+
+			themeToggleBtn?.addEventListener("click", toggleTheme);
+			mobileThemeToggleBtn?.addEventListener("click", toggleTheme);
 
 			syncThemeUI();
 
@@ -1054,6 +1292,43 @@ function getDomain(urlStr: string) {
 			modalSearchInput?.addEventListener("input", () => {
 				currentCategoryFilter = "All";
 				renderSearchResults();
+			});
+
+			// -------------------------------------------------------------
+			// H. MOBILE SLIDE-OUT RIGHT DRAWER LOGIC
+			// -------------------------------------------------------------
+			const mobileMenuOpenBtn = document.getElementById("mobileMenuOpenBtn");
+			const desktopMenuOpenBtn = document.getElementById("desktopMenuOpenBtn");
+			const mobileMenuCloseBtn = document.getElementById("mobileMenuCloseBtn");
+			const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+			const mobileDrawer = document.getElementById("mobileDrawer");
+
+			function openMobileDrawer() {
+				mobileMenuOverlay?.classList.remove("pointer-events-none");
+				mobileMenuOverlay?.classList.remove("opacity-0");
+				mobileMenuOverlay?.classList.add("opacity-100");
+				mobileDrawer?.classList.remove("translate-x-full");
+				document.body.style.overflow = "hidden";
+			}
+
+			function closeMobileDrawer() {
+				mobileMenuOverlay?.classList.remove("opacity-100");
+				mobileMenuOverlay?.classList.add("opacity-0");
+				mobileMenuOverlay?.classList.add("pointer-events-none");
+				mobileDrawer?.classList.add("translate-x-full");
+				document.body.style.overflow = "";
+			}
+
+			mobileMenuOpenBtn?.addEventListener("click", openMobileDrawer);
+			desktopMenuOpenBtn?.addEventListener("click", openMobileDrawer);
+			mobileMenuCloseBtn?.addEventListener("click", closeMobileDrawer);
+			mobileMenuOverlay?.addEventListener("click", closeMobileDrawer);
+
+			// Automatically close the drawer whenever a visitor taps any link inside it
+			document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+				link.addEventListener("click", () => {
+					closeMobileDrawer();
+				});
 			});
 		</script>
 	</body>
